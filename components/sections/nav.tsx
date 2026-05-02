@@ -75,4 +75,23 @@ export function Nav() {
       <motion.div
         initial={false}
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.32, ease: [0.2,
+        transition={{ duration: 0.32, ease: [0.2, 0.7, 0.3, 1] }}
+        className="overflow-hidden md:hidden border-t border-ink/10 bg-cream-100"
+      >
+        <div className="container py-6 flex flex-col gap-4">
+          {sections.map((s) => (
+            <a
+              key={s}
+              href={`#${s}`}
+              onClick={() => setOpen(false)}
+              className="text-2xl font-serif text-olive-800"
+              style={{ fontVariationSettings: "'opsz' 96, 'wght' 460, 'SOFT' 80" }}
+            >
+              {t(s)}
+            </a>
+          ))}
+        </div>
+      </motion.div>
+    </motion.header>
+  );
+}

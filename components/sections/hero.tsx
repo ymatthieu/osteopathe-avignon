@@ -14,14 +14,12 @@ export function Hero() {
   const ref = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
-  // Title weight/opsz drift as user scrolls
   const wght = useTransform(scrollYProgress, [0, 1], [580, 320]);
   const opsz = useTransform(scrollYProgress, [0, 1], [144, 80]);
   const soft = useTransform(scrollYProgress, [0, 1], [40, 100]);
   const fvs = useTransform([wght, opsz, soft], ([w, o, s]) =>
     `'wght' ${w}, 'opsz' ${o}, 'SOFT' ${s}`
   );
-  // Subtle parallax push of the tagline
   const tagY = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
@@ -31,7 +29,6 @@ export function Hero() {
     >
       <BreathingOrganism />
 
-      {/* Top frame — editorial chrome */}
       <div className="absolute inset-x-0 top-24 px-6 md:px-12 flex items-start justify-between font-mono text-[10px] uppercase tracking-[0.24em] text-ink-muted">
         <div>
           <div>N° 01 — 2026</div>
@@ -43,7 +40,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Massive type — the centerpiece */}
       <div className="container relative z-10">
         <div className="max-w-[1400px]">
           <motion.span
@@ -55,7 +51,6 @@ export function Hero() {
             {t("eyebrow")}
           </motion.span>
 
-          {/* Two-line display title with variable-font drift */}
           <div className="overflow-hidden">
             <motion.h1
               initial={reduce ? false : { y: "110%" }}
@@ -79,7 +74,6 @@ export function Hero() {
             </motion.h1>
           </div>
 
-          {/* Right-floated subtitle + CTA */}
           <motion.div
             style={{ y: tagY }}
             initial={reduce ? false : { opacity: 0 }}
@@ -95,4 +89,41 @@ export function Hero() {
               </span>
             </p>
 
-    
+            <div className="flex flex-wrap items-center gap-4">
+              <Magnetic strength={0.45}>
+                <a
+                  data-cursor="rdv"
+                  href={SITE.doctolib.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="group inline-flex items-center gap-3 rounded-full bg-olive-700 text-cream-50 px-7 py-4 font-mono text-xs uppercase tracking-[0.18em] hover:bg-olive-800 transition-colors"
+                >
+                  <span>Réserver</span>
+                  <span className="block h-2 w-2 rounded-full bg-saffron-500 group-hover:scale-125 transition-transform" />
+                </a>
+              </Magnetic>
+              <Link
+                data-cursor="anatomy"
+                href="#anatomy"
+                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.18em] text-olive-800 underline underline-offset-8 decoration-olive-700/40 hover:decoration-olive-700"
+              >
+                Explorer l&apos;approche ↓
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      <motion.div
+        initial={{ scaleX: 0 }}
+        animate={{ scaleX: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut", delay: 1.4 }}
+        className="absolute bottom-10 left-6 right-6 h-px origin-left bg-olive-700/30"
+      />
+      <div className="absolute bottom-4 left-6 right-6 flex justify-between font-mono text-[10px] uppercase tracking-[0.24em] text-ink-muted">
+        <span>{t("scroll_hint")}</span>
+        <span>60 € · 45 min · sur RDV</span>
+      </div>
+    </section>
+  );
+}

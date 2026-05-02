@@ -23,7 +23,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-
   const isFr = locale === "fr";
   const url = `${SITE.url}${isFr ? "" : "/en"}`;
 
@@ -78,21 +77,18 @@ export default async function LocaleLayout({
 
   const messages = await getMessages();
   const tMeta = await getTranslations({ locale, namespace: "meta" });
-
   const isFr = locale === "fr";
+
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": ["MedicalBusiness", "LocalBusiness"],
     "@id": `${SITE.url}/#localbusiness`,
     name: SITE.name,
-    alternateName: ["Matthieu Yeghiazarian Ostéopathe", "Osteopath Avignon Yeghiazarian"],
     description: tMeta("description"),
     url: SITE.url,
     image: [`${SITE.url}/images/og.svg`],
     email: SITE.email,
     priceRange: "€€",
-    currenciesAccepted: "EUR",
-    paymentAccepted: "Cash, Credit Card, Debit Card",
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -106,44 +102,21 @@ export default async function LocaleLayout({
       latitude: SITE.address.latitude,
       longitude: SITE.address.longitude,
     },
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${SITE.address.street} ${SITE.address.postalCode} ${SITE.address.city}`)}`,
     openingHoursSpecification: SITE.hours.map((h) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: h.day,
       opens: h.opens,
       closes: h.closes,
     })),
-    areaServed: [
-      { "@type": "City", name: "Avignon" },
-      { "@type": "Place", name: "Le Pontet" },
-      { "@type": "Place", name: "Villeneuve-lès-Avignon" },
-      { "@type": "Place", name: "Sorgues" },
-      { "@type": "Place", name: "Morières-lès-Avignon" },
-    ],
     availableLanguage: [
-      { "@type": "Language", name: "French", alternateName: "fr" },
-      { "@type": "Language", name: "English", alternateName: "en" },
+      { "@type": "Language", name: "French" },
+      { "@type": "Language", name: "English" },
     ],
     medicalSpecialty: "Osteopathic",
-    knowsAbout: [
-      "Ostéopathie structurelle",
-      "Ostéopathie crânienne",
-      "Ostéopathie viscérale",
-      "Ostéopathie pédiatrique",
-      "Ostéopathie du sport",
-      "Ostéopathie de la femme enceinte",
-    ],
     potentialAction: {
       "@type": "ReserveAction",
       name: isFr ? "Prendre rendez-vous" : "Book appointment",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: SITE.doctolib.url,
-        actionPlatform: [
-          "http://schema.org/DesktopWebPlatform",
-          "http://schema.org/MobileWebPlatform",
-        ],
-      },
+      target: SITE.doctolib.url,
     },
     sameAs: [SITE.doctolib.url],
   };
@@ -153,8 +126,6 @@ export default async function LocaleLayout({
     "@type": "Person",
     "@id": `${SITE.url}/#person`,
     name: "Matthieu Yeghiazarian",
-    givenName: "Matthieu",
-    familyName: "Yeghiazarian",
     honorificSuffix: "D.O.",
     jobTitle: isFr ? "Ostéopathe D.O." : "Osteopath D.O.",
     image: `${SITE.url}/images/matthieu-portrait.jpg`,
@@ -164,12 +135,7 @@ export default async function LocaleLayout({
     alumniOf: {
       "@type": "EducationalOrganization",
       name: "Collège d'Ostéopathie de Provence",
-      address: { "@type": "PostalAddress", addressLocality: "Aix-en-Provence", addressCountry: "FR" },
     },
-    knowsLanguage: [
-      { "@type": "Language", name: "French" },
-      { "@type": "Language", name: "English" },
-    ],
     sameAs: [SITE.doctolib.url],
   };
 
@@ -183,7 +149,6 @@ export default async function LocaleLayout({
       <main id="main">{children}</main>
       <Footer />
       <StickyCta />
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
@@ -191,4 +156,7 @@ export default async function LocaleLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-     
+      />
+    </NextIntlClientProvider>
+  );
+}

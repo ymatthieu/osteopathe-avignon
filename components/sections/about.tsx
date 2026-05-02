@@ -14,7 +14,6 @@ export function About() {
           §05 · {t("eyebrow")}
         </div>
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
-          {/* Portrait — taller and editorial */}
           <Reveal className="md:col-span-5">
             <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-[#1a1a1f] to-[#2c2c33] rounded-[2px]">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-cream-50/40 text-center p-8">
@@ -27,7 +26,6 @@ export function About() {
               </div>
               <div aria-hidden className="absolute inset-0"
                    style={{ background: "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), transparent 60%)" }}/>
-              {/* Caption */}
               <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between font-mono text-[9px] uppercase tracking-[0.24em] text-cream-50/60">
                 <span>Cabinet · Avignon</span>
                 <span>2026</span>
@@ -35,7 +33,6 @@ export function About() {
             </div>
           </Reveal>
 
-          {/* Content */}
           <div className="md:col-span-7 md:pt-8">
             <Reveal delay={0.1}>
               <h2 className="font-serif text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.02em] text-olive-800"
@@ -59,3 +56,16 @@ export function About() {
                 {t("body_2")}
               </p>
             </Reveal>
+            <Reveal delay={0.5}>
+              <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-ink/10 pt-6 font-mono text-[10px] uppercase tracking-[0.18em] text-olive-700">
+                {credentials.map((c) => (
+                  <span key={c}>· {c}</span>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

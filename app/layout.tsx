@@ -3,7 +3,6 @@ import { Fraunces, Geist_Mono, Geist } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 
-// Fraunces: variable serif with full axes (wght, opsz, SOFT, WONK)
 const fraunces = Fraunces({
   subsets: ["latin"],
   axes: ["opsz", "SOFT", "WONK"],
@@ -35,4 +34,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-  
+    <html className={`${fraunces.variable} ${geist.variable} ${geistMono.variable}`}>
+      <body className="font-sans">{children}</body>
+    </html>
+  );
+}

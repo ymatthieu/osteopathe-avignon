@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/reveal";
 import { HoverSpotlightCard } from "@/components/effects/hover-spotlight-card";
-import { Heart, Activity, Baby, Users, Globe2, Trophy } from "lucide-react";
+import { Heart, Baby, Users, Globe2, Trophy } from "lucide-react";
 
 const items = [
   { key: "adults", n: "01", Icon: Heart },
@@ -19,7 +19,6 @@ export function Services() {
 
   return (
     <section id="services" className="relative bg-cream-100 py-32 md:py-44">
-      {/* editorial header */}
       <div className="container">
         <div className="grid md:grid-cols-[2fr_3fr] gap-12 mb-20 items-end">
           <div>
@@ -49,4 +48,21 @@ export function Services() {
                   </div>
                   <h3 className="font-serif text-3xl md:text-4xl text-olive-800 leading-tight"
                       style={{ fontVariationSettings: "'opsz' 96, 'wght' 480, 'SOFT' 80" }}>
-                   
+                    {t(`items.${key}.title`)}
+                  </h3>
+                  <p className="mt-5 text-sm leading-relaxed text-ink/75">
+                    {t(`items.${key}.body`)}
+                  </p>
+                  <div className="mt-auto pt-8 flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] font-mono text-olive-700">
+                    <span>Voir séance</span>
+                    <span className="block h-px w-8 bg-olive-700/40 group-hover:w-16 transition-all"/>
+                  </div>
+                </div>
+              </HoverSpotlightCard>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
