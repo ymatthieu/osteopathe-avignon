@@ -1,98 +1,98 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { Spotlight } from "@/components/aceternity/spotlight";
-import { TextGenerateEffect } from "@/components/aceternity/text-generate";
-import { Sparkles } from "@/components/aceternity/sparkles";
-import { DoctolibButton } from "@/components/marketing/doctolib-button";
+import { useRef } from "react";
+import Link from "next/link";
+import { BreathingOrganism } from "@/components/effects/breathing-organism";
+import { Magnetic } from "@/components/effects/magnetic";
+import { SITE } from "@/lib/utils";
 
 export function Hero() {
   const t = useTranslations("hero");
   const reduce = useReducedMotion();
+  const ref = useRef<HTMLElement>(null);
+
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  // Title weight/opsz drift as user scrolls
+  const wght = useTransform(scrollYProgress, [0, 1], [580, 320]);
+  const opsz = useTransform(scrollYProgress, [0, 1], [144, 80]);
+  const soft = useTransform(scrollYProgress, [0, 1], [40, 100]);
+  const fvs = useTransform([wght, opsz, soft], ([w, o, s]) =>
+    `'wght' ${w}, 'opsz' ${o}, 'SOFT' ${s}`
+  );
+  // Subtle parallax push of the tagline
+  const tagY = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <section className="relative isolate min-h-[100svh] overflow-hidden bg-cream-100 flex items-center">
-      {/* Aceternity spotlight */}
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="#cfb589" />
+    <section
+      ref={ref}
+      className="relative isolate min-h-[100svh] overflow-hidden flex items-end pb-24 md:pb-40"
+    >
+      <BreathingOrganism />
 
-      {/* Soft radial gradients */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background: `
-            radial-gradient(800px 500px at 75% 30%, rgba(135, 150, 106, 0.18), transparent 60%),
-            radial-gradient(600px 400px at 20% 80%, rgba(212, 200, 180, 0.35), transparent 70%),
-            linear-gradient(180deg, #f1ece4 0%, #fbf8f3 100%)
-          `,
-        }}
-      />
-
-      {/* Anatomical skeleton silhouette - subtle background */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center -z-10 opacity-[0.06]">
-        <svg viewBox="0 0 200 200" className="w-[600px] h-[600px] text-olive-700" fill="none" aria-hidden>
-          <circle cx="100" cy="100" r="60" stroke="currentColor" strokeWidth="0.4" />
-          <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="0.3" />
-          <circle cx="100" cy="100" r="100" stroke="currentColor" strokeWidth="0.2" />
-        </svg>
+      {/* Top frame — editorial chrome */}
+      <div className="absolute inset-x-0 top-24 px-6 md:px-12 flex items-start justify-between font-mono text-[10px] uppercase tracking-[0.24em] text-ink-muted">
+        <div>
+          <div>N° 01 — 2026</div>
+          <div className="mt-1 opacity-60">Cabinet privé · Avignon</div>
+        </div>
+        <div className="text-right">
+          <div>43°56′N • 4°48′E</div>
+          <div className="mt-1 opacity-60">38, rue Saint-Ruf</div>
+        </div>
       </div>
 
-      <Sparkles density={20} color="#cfb589" />
-
-      <div className="container relative z-10 text-center py-32">
-        <motion.span
-          initial={reduce ? false : { opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-block mb-5 text-xs uppercase tracking-[0.18em] text-olive-700 font-medium"
-        >
-          {t("eyebrow")}
-        </motion.span>
-
-        <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[1.05] text-olive-700 tracking-tight">
-          <TextGenerateEffect words={t("title_line_1")} className="block" />
-          <TextGenerateEffect words={t("title_line_2")} className="block" duration={0.6} />
-        </h1>
-
-        <motion.p
-          initial={reduce ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="mt-8 mb-12 italic font-serif text-xl md:text-2xl text-ink-muted"
-        >
-          <span>{t("tagline_1")}</span>
-          <span className="mx-3 text-olive-600">•</span>
-          <span>{t("tagline_2")}</span>
-          <span className="mx-3 text-olive-600">•</span>
-          <span>{t("tagline_3")}</span>
-        </motion.p>
-
-        <motion.div
-          initial={reduce ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.4 }}
-          className="flex flex-wrap justify-center gap-3"
-        >
-          <DoctolibButton variant="primary">{t("cta_primary")}</DoctolibButton>
-          <a
-            href="#approach"
-            className="inline-flex items-center gap-2 rounded-full border border-olive-600/20 bg-cream-50/80 px-7 py-3.5 font-medium text-base text-olive-700 backdrop-blur-sm transition hover:border-olive-600 hover:bg-cream-100"
+      {/* Massive type — the centerpiece */}
+      <div className="container relative z-10">
+        <div className="max-w-[1400px]">
+          <motion.span
+            initial={reduce ? false : { opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="block font-mono text-[10px] uppercase tracking-[0.3em] text-olive-700/80 mb-8"
           >
-            {t("cta_secondary")}
-          </a>
-        </motion.div>
+            {t("eyebrow")}
+          </motion.span>
 
-        {/* Scroll hint */}
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: [0.3, 1, 0.3] }}
-          transition={{ duration: 2.4, repeat: Infinity, delay: 2 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.16em] text-ink-muted"
-        >
-          {t("scroll_hint")} ↓
-        </motion.span>
-      </div>
-    </section>
-  );
-}
+          {/* Two-line display title with variable-font drift */}
+          <div className="overflow-hidden">
+            <motion.h1
+              initial={reduce ? false : { y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, ease: [0.2, 0.7, 0.2, 1], delay: 0.2 }}
+              style={{ fontVariationSettings: fvs }}
+              className="font-serif text-[clamp(3.2rem,11vw,12rem)] leading-[0.92] tracking-[-0.02em] text-olive-800"
+            >
+              Matthieu
+            </motion.h1>
+          </div>
+          <div className="overflow-hidden">
+            <motion.h1
+              initial={reduce ? false : { y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, ease: [0.2, 0.7, 0.2, 1], delay: 0.34 }}
+              style={{ fontVariationSettings: fvs }}
+              className="font-serif italic text-[clamp(3.2rem,11vw,12rem)] leading-[0.92] tracking-[-0.02em] text-olive-700/95"
+            >
+              Yeghiazarian.
+            </motion.h1>
+          </div>
+
+          {/* Right-floated subtitle + CTA */}
+          <motion.div
+            style={{ y: tagY }}
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="mt-12 grid gap-10 md:grid-cols-[1fr_auto] md:items-end"
+          >
+            <p className="max-w-xl text-base md:text-lg text-ink/85 leading-relaxed font-mono">
+              <span className="text-olive-700">↳</span>&nbsp;{t("tagline_1")}, {t("tagline_2").toLowerCase()},{" "}
+              {t("tagline_3").toLowerCase()}.
+              <span className="block mt-3 opacity-60 text-sm">
+                Ostéopathe D.O. — Cabinet au cœur d&apos;Avignon. 16 ans d&apos;expérience. FR / EN.
+              </span>
+            </p>
+
+    

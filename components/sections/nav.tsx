@@ -6,7 +6,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "@/components/marketing/language-switcher";
-import { DoctolibButton } from "@/components/marketing/doctolib-button";
+import { Magnetic } from "@/components/effects/magnetic";
+import { SITE } from "@/lib/utils";
 
 const sections = ["approach", "services", "about", "pricing", "faq", "contact"] as const;
 
@@ -14,27 +15,30 @@ export function Nav() {
   const t = useTranslations("nav");
   const [open, setOpen] = useState(false);
   const { scrollY } = useScroll();
-  const borderOpacity = useTransform(scrollY, [0, 80], [0, 1]);
+  const opacity = useTransform(scrollY, [0, 80], [0, 1]);
 
   return (
-    <motion.header
-      className="fixed inset-x-0 top-0 z-40 backdrop-blur-md bg-cream-100/80"
-      style={{ borderBottom: "1px solid", borderColor: useTransform(borderOpacity, (v) => `rgba(43,43,37,${v * 0.12})`) }}
-    >
-      <div className="container flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="font-serif text-xl text-olive-700 leading-none">
-          Matthieu Yeghiazarian
-          <span className="block text-[10px] uppercase tracking-[0.14em] text-ink-muted font-sans font-normal mt-0.5">
+    <motion.header className="fixed inset-x-0 top-0 z-40">
+      <motion.div
+        style={{ opacity }}
+        className="absolute inset-0 backdrop-blur-md bg-cream-100/70 border-b border-ink/10"
+      />
+      <div className="relative container flex h-16 items-center justify-between gap-4">
+        <Link data-cursor="link" href="/" className="font-serif text-lg text-olive-800 leading-none"
+              style={{ fontVariationSettings: "'opsz' 96, 'wght' 540, 'SOFT' 80" }}>
+          Yeghiazarian
+          <span className="block font-mono text-[9px] uppercase tracking-[0.24em] text-ink-muted font-normal mt-0.5">
             Ostéopathe D.O. — Avignon
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden md:flex items-center gap-7 text-sm">
+        <nav aria-label="Primary" className="hidden md:flex items-center gap-8 font-mono text-[11px] uppercase tracking-[0.18em]">
           {sections.map((s) => (
             <a
               key={s}
+              data-cursor="link"
               href={`#${s}`}
-              className="text-ink hover:text-olive-700 transition relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-olive-600 after:transition-all hover:after:w-full"
+              className="text-ink/70 hover:text-olive-800 transition"
             >
               {t(s)}
             </a>
@@ -44,7 +48,18 @@ export function Nav() {
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <div className="hidden md:block">
-            <DoctolibButton variant="primary">{t("book")}</DoctolibButton>
+            <Magnetic strength={0.4}>
+              <a
+                data-cursor="rdv"
+                href={SITE.doctolib.url}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 rounded-full bg-olive-800 text-cream-50 px-5 py-2.5 font-mono text-[10px] uppercase tracking-[0.18em] hover:bg-olive-900 transition-colors"
+              >
+                Réserver
+                <span className="block h-1.5 w-1.5 rounded-full bg-saffron-500" />
+              </a>
+            </Magnetic>
           </div>
           <button
             onClick={() => setOpen((v) => !v)}
@@ -57,26 +72,7 @@ export function Nav() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <motion.div
         initial={false}
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.32, ease: [0.2, 0.7, 0.3, 1] }}
-        className="overflow-hidden md:hidden border-t border-ink/10 bg-cream-100"
-      >
-        <div className="container py-6 flex flex-col gap-4">
-          {sections.map((s) => (
-            <a
-              key={s}
-              href={`#${s}`}
-              onClick={() => setOpen(false)}
-              className="text-lg font-serif text-olive-700"
-            >
-              {t(s)}
-            </a>
-          ))}
-        </div>
-      </motion.div>
-    </motion.header>
-  );
-}
+        transition={{ duration: 0.32, ease: [0.2,

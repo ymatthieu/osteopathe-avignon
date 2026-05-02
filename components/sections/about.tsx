@@ -2,75 +2,60 @@
 
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/reveal";
-import Image from "next/image";
 
 export function About() {
   const t = useTranslations("about");
   const credentials = t.raw("credentials") as string[];
 
   return (
-    <section id="about" className="bg-cream-50 py-28 md:py-36">
+    <section id="about" className="relative bg-[#faf6ed] py-32 md:py-44 overflow-hidden">
       <div className="container">
-        <div className="grid gap-16 md:grid-cols-2 md:gap-20 items-center">
-          {/* Portrait */}
-          <Reveal>
-            <div className="relative aspect-[4/5] max-w-md mx-auto rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1a1f] to-[#2c2c33] shadow-glow">
-              {/* TODO: replace with <Image src="/images/matthieu-portrait.jpg" alt="..." fill className="object-cover" priority /> */}
+        <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-olive-700 mb-12">
+          §05 · {t("eyebrow")}
+        </div>
+        <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
+          {/* Portrait — taller and editorial */}
+          <Reveal className="md:col-span-5">
+            <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-[#1a1a1f] to-[#2c2c33] rounded-[2px]">
               <div className="absolute inset-0 flex flex-col items-center justify-center text-cream-50/40 text-center p-8">
-                <div className="font-serif text-5xl">⌬</div>
-                <div className="mt-4 text-xs uppercase tracking-[0.18em]">
-                  Portrait de Matthieu
+                <div className="font-serif text-6xl"
+                     style={{ fontVariationSettings: "'opsz' 144, 'wght' 480, 'SOFT' 100" }}>
+                  MY
                 </div>
-                <div className="mt-2 text-[11px] opacity-70">
-                  drop /public/images/matthieu-portrait.jpg
-                </div>
+                <div className="mt-4 font-mono text-[10px] uppercase tracking-[0.3em]">Portrait</div>
+                <div className="mt-1 font-mono text-[9px] opacity-70">drop matthieu-portrait.jpg</div>
               </div>
-              {/* Subtle radial accent */}
-              <div
-                aria-hidden
-                className="absolute inset-0"
-                style={{ background: "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), transparent 60%)" }}
-              />
+              <div aria-hidden className="absolute inset-0"
+                   style={{ background: "radial-gradient(circle at 30% 20%, rgba(255,255,255,0.06), transparent 60%)" }}/>
+              {/* Caption */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between font-mono text-[9px] uppercase tracking-[0.24em] text-cream-50/60">
+                <span>Cabinet · Avignon</span>
+                <span>2026</span>
+              </div>
             </div>
           </Reveal>
 
           {/* Content */}
-          <div>
-            <Reveal>
-              <span className="text-xs uppercase tracking-[0.18em] text-olive-700 font-medium">
-                {t("eyebrow")}
-              </span>
-            </Reveal>
+          <div className="md:col-span-7 md:pt-8">
             <Reveal delay={0.1}>
-              <h2 className="mt-3 font-serif text-4xl md:text-5xl text-olive-700 tracking-tight">
+              <h2 className="font-serif text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.02em] text-olive-800"
+                  style={{ fontVariationSettings: "'opsz' 144, 'wght' 460, 'SOFT' 60" }}>
                 {t("title")}
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 text-lg text-ink leading-relaxed">{t("lead")}</p>
+              <p className="mt-8 text-2xl md:text-3xl font-serif italic leading-snug text-olive-900/90"
+                 style={{ fontVariationSettings: "'opsz' 96, 'wght' 380, 'SOFT' 100" }}>
+                {t("lead")}
+              </p>
             </Reveal>
             <Reveal delay={0.3}>
-              <p className="mt-4 text-ink-muted leading-relaxed">{t("body_1")}</p>
+              <p className="mt-8 text-base md:text-lg leading-relaxed text-ink/80 max-w-2xl">
+                {t("body_1")}
+              </p>
             </Reveal>
             <Reveal delay={0.4}>
-              <p className="mt-4 text-ink-muted leading-relaxed">{t("body_2")}</p>
+              <p className="mt-4 text-base md:text-lg leading-relaxed text-ink/80 max-w-2xl">
+                {t("body_2")}
+              </p>
             </Reveal>
-
-            <Reveal delay={0.5}>
-              <div className="mt-8 flex flex-wrap gap-2">
-                {credentials.map((c) => (
-                  <span
-                    key={c}
-                    className="rounded-full border border-olive-600/15 bg-cream-100 px-4 py-1.5 text-xs font-medium text-olive-700"
-                  >
-                    {c}
-                  </span>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}

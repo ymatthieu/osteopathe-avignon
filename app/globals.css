@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --font-cormorant: "Cormorant Garamond", Georgia, serif;
-    --font-inter: "Inter", system-ui, sans-serif;
-  }
-
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
@@ -16,6 +11,13 @@
   body {
     @apply bg-cream-100 text-ink antialiased;
     font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+    /* Hide native cursor — replaced by CustomCursor on desktop */
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    html, body, * {
+      cursor: none !important;
+    }
   }
 
   /* Reduce motion preference */
@@ -28,26 +30,17 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+    html, body, * { cursor: auto !important; }
   }
 
-  /* Selection */
   ::selection {
-    @apply bg-olive-600 text-cream-50;
+    @apply bg-olive-800 text-cream-50;
   }
 
-  /* Focus ring */
   :focus-visible {
-    @apply outline-2 outline-offset-2 outline-olive-600;
+    @apply outline-2 outline-offset-2 outline-olive-700;
+    cursor: auto !important;
   }
 
-  /* Skip link */
   .skip-link {
-    @apply absolute -top-24 left-0 z-50 bg-olive-700 px-4 py-2 text-cream-50 transition-all focus:top-0;
-  }
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+    @apply absolute -top-24 left-0 z-[210] bg-olive-800 px-4 py-2 text-cream-50 transition-all focus:top-0

@@ -1,6 +1,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Hero } from "@/components/sections/hero";
 import { Principles } from "@/components/sections/principles";
+import { Anatomy } from "@/components/sections/anatomy";
 import { Stats } from "@/components/sections/stats";
 import { Services } from "@/components/sections/services";
 import { About } from "@/components/sections/about";
@@ -17,7 +18,6 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
 
-  // FAQ JSON-LD assembled from translations for max additive SEO value
   const t = await getTranslations({ locale, namespace: "faq" });
   const items = (t.raw("items") as { q: string; a: string }[]) || [];
   const faqSchema = {
@@ -34,8 +34,9 @@ export default async function HomePage({
     <>
       <Hero />
       <Principles />
-      <Stats />
+      <Anatomy />
       <Services />
+      <Stats />
       <About />
       <Pricing />
       <Testimonials />
@@ -48,4 +49,3 @@ export default async function HomePage({
       />
     </>
   );
-}

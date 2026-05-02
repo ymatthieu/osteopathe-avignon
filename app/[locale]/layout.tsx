@@ -9,6 +9,8 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { ScrollProgress } from "@/components/marketing/scroll-progress";
 import { StickyCta } from "@/components/marketing/sticky-cta";
+import { CustomCursor } from "@/components/effects/custom-cursor";
+import { IntroOverlay } from "@/components/effects/intro-overlay";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -47,17 +49,16 @@ export async function generateMetadata({
       siteName: SITE.name,
       title: t("title"),
       description: t("description"),
-      images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: SITE.shortName }],
+      images: [{ url: "/images/og.svg", width: 1200, height: 630, alt: SITE.shortName }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: ["/images/og.jpg"],
+      images: ["/images/og.svg"],
     },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
     other: {
-      // Point AI crawlers to LLM-friendly resources
       "ai-content-summary": "/llms.txt",
       "ai-content-markdown": "/page.md",
     },
@@ -78,7 +79,6 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const tMeta = await getTranslations({ locale, namespace: "meta" });
 
-  // Schema.org JSON-LD — LocalBusiness + MedicalBusiness + Person + Service offers
   const isFr = locale === "fr";
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -88,7 +88,7 @@ export default async function LocaleLayout({
     alternateName: ["Matthieu Yeghiazarian Ostéopathe", "Osteopath Avignon Yeghiazarian"],
     description: tMeta("description"),
     url: SITE.url,
-    image: [`${SITE.url}/images/og.jpg`],
+    image: [`${SITE.url}/images/og.svg`],
     email: SITE.email,
     priceRange: "€€",
     currenciesAccepted: "EUR",
@@ -176,6 +176,8 @@ export default async function LocaleLayout({
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
       <a className="skip-link" href="#main">Passer au contenu principal</a>
+      <IntroOverlay />
+      <CustomCursor />
       <ScrollProgress />
       <Nav />
       <main id="main">{children}</main>
@@ -189,7 +191,4 @@ export default async function LocaleLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-    </NextIntlClientProvider>
-  );
-}
+     
