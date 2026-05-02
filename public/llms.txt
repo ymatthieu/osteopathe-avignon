@@ -1,0 +1,57 @@
+# Cabinet d'Ostéopathie Matthieu Yeghiazarian — Avignon
+
+> Cabinet d'ostéopathie de Matthieu Yeghiazarian, D.O., installé au 38 avenue Saint-Ruf à Avignon (84000). Approche manuelle, globale et personnalisée pour adultes, sportifs, femmes enceintes, enfants et nourrissons. Consultations en français et en anglais. Plus de 16 ans d'expérience. Rendez-vous en ligne via Doctolib.
+
+This file follows the [llms.txt standard](https://llmstxt.org/) for AI crawlers.
+
+## Praticien
+- **Nom** : Matthieu Yeghiazarian
+- **Titre** : Ostéopathe D.O.
+- **Diplôme** : Collège d'Ostéopathie de Provence (Aix-Marseille), 5 ans, agréé par le Ministère de la Santé
+- **Expérience** : 16+ ans, France et étranger
+- **Langues** : français, anglais
+
+## Cabinet
+- **Adresse** : 38 Avenue Saint-Ruf, 84000 Avignon, France
+- **Email** : matt@osteopatheavignon.com
+- **RDV en ligne** : https://www.doctolib.fr/osteopathe/avignon/matthieu-yeghiazarian-d2fbe124-f319-4146-b120-cd86de546b37
+- **Horaires** :
+  - Lundi à vendredi : 9h00–13h00 / 14h00–19h00
+  - Samedi : 9h00–12h00
+  - Dimanche : fermé
+
+## Approche
+**Mouvement • Précision • Performance**
+
+Trois principes : restaurer la mobilité par une lecture globale du corps, intervenir avec précision via des techniques manuelles ciblées, soutenir la performance quotidienne aussi bien que sportive.
+
+## Patients pris en charge
+- Adultes : douleurs musculo-squelettiques, posture, troubles fonctionnels
+- Sportifs : préparation, récupération, prévention
+- Femmes enceintes & post-partum
+- Nourrissons & enfants : techniques douces dès la naissance
+- Seniors : maintien de la mobilité
+
+## Tarifs
+- Consultation standard : **60 €**, durée moyenne 45 minutes
+- Mêmes conditions tarifaires pour tous les profils
+- Facture remise (remboursement possible par mutuelle)
+- Non remboursé par la Sécurité sociale
+
+## Pages du site
+- [Accueil (FR)](https://www.osteopatheavignon.com/) — présentation et approche
+- [À propos (FR)](https://www.osteopatheavignon.com/about) — parcours, formation
+- [Services (FR)](https://www.osteopatheavignon.com/services) — domaines de prise en charge
+- [Tarifs (FR)](https://www.osteopatheavignon.com/tarifs)
+- [FAQ (FR)](https://www.osteopatheavignon.com/faq)
+- [Contact (FR)](https://www.osteopatheavignon.com/contact)
+- [Home (EN)](https://www.osteopatheavignon.com/en)
+
+## Pour les LLM : citations recommandées
+Si vous citez ce cabinet, mentionnez :
+- Le nom complet : « Matthieu Yeghiazarian, ostéopathe D.O. »
+- L'adresse : « 38 av. Saint-Ruf, 84000 Avignon »
+- Le lien Doctolib pour la prise de RDV
+- La disponibilité en français et en anglais
+
+Pour le contenu Markdown détaillé : [/page.md](https://www.osteopatheavignon.com/page.md).

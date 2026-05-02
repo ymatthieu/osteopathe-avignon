@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Osteopath Avignon — Matthieu Yeghiazarian, D.O. | English-speaking | Book online",
+    "description": "Matthieu Yeghiazarian, English-speaking osteopath D.O. in Avignon (38 Saint-Ruf Avenue). 16 years of experience. Whole-body manual approach for adults, athletes, expectant mothers, children and infants. Online booking via Doctolib."
+  },
+  "nav": {
+    "approach": "Approach",
+    "services": "Services",
+    "about": "About",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Book",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Osteopathy practice • Avignon",
+    "title_line_1": "Matthieu Yeghiazarian,",
+    "title_line_2": "Osteopath D.O.",
+    "tagline_1": "Movement",
+    "tagline_2": "Precision",
+    "tagline_3": "Performance",
+    "cta_primary": "Book an appointment",
+    "cta_secondary": "Discover the approach",
+    "scroll_hint": "Discover"
+  },
+  "principles": {
+    "eyebrow": "Our approach",
+    "title": "Three principles, one practice",
+    "movement": {
+      "title": "Movement",
+      "body": "Movement is at the heart of osteopathy. Each session focuses on how the body moves as a whole, identifying restrictions and restoring mobility — for movement that feels easier, more fluid, more natural every day."
+    },
+    "precision": {
+      "title": "Precision",
+      "body": "Osteopathic care relies on careful observation and precise, hands-on techniques. Every treatment is adapted to the individual, with close attention to posture, balance, and the way the body responds."
+    },
+    "performance": {
+      "title": "Performance",
+      "body": "Performance isn't just about sport. It's how well the body supports daily life, work, recovery, and physical activity. Osteopathy helps the body function efficiently — for athletic demands and everyday movement alike."
+    }
+  },
+  "stats": {
+    "experience": "Years of experience",
+    "languages": "Languages spoken",
+    "session": "Session length",
+    "fee": "Flat fee",
+    "min": "min"
+  },
+  "services": {
+    "eyebrow": "Areas of care",
+    "title": "Osteopathy for every stage of life",
+    "items": {
+      "adults": {
+        "title": "Adults & active life",
+        "body": "Neck, back and lumbar pain. Tendinopathies. Recovery from injuries. Postural strain from desk work or repetitive movement."
+      },
+      "sport": {
+        "title": "Athletes",
+        "body": "Pre-effort preparation, technique optimisation, post-training recovery, injury prevention. Tailored to your discipline."
+      },
+      "pregnancy": {
+        "title": "Pregnancy & post-partum",
+        "body": "Care across all three trimesters and after delivery: lumbar pain, sciatica, digestive issues, postural recovery."
+      },
+      "pediatric": {
+        "title": "Infants & children",
+        "body": "Gentle, age-appropriate techniques from birth: positional cranial deformities, reflux, restless sleep, recurring ENT issues."
+      },
+      "seniors": {
+        "title": "Seniors",
+        "body": "Mobility maintenance, fall prevention, support for chronic joint pain and post-surgery recovery."
+      },
+      "english": {
+        "title": "English speakers",
+        "body": "Full consultations in English for international patients, expats, and tourists visiting Avignon. Online booking via Doctolib."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A practice grounded in experience",
+    "lead": "Matthieu Yeghiazarian, osteopath D.O., draws on more than 16 years of experience caring for his patients.",
+    "body_1": "A graduate of the College of Osteopathy of Provence (Aix-Marseille), he has practised in France and abroad with patients of all profiles. His work is grounded in precise hands-on technique and a whole-body approach, built on a deep understanding of anatomy, biomechanics, and how the body works.",
+    "body_2": "Outside the practice, Matthieu trains in Brazilian jiu-jitsu — a demanding discipline that nourishes his interest in movement, biomechanics, and performance.",
+    "credentials": ["D.O. — Bac+5", "COP Aix-Marseille", "16+ years", "FR / EN", "Pediatrics • Sports • Pregnancy"]
+  },
+  "pricing": {
+    "eyebrow": "Fees",
+    "title": "Transparent, no surprises",
+    "consultation": "Consultation",
+    "duration": "Duration",
+    "fee": "Fee",
+    "items": {
+      "adult": "Adult",
+      "athlete": "Athlete",
+      "pregnancy": "Pregnancy / post-partum",
+      "pediatric": "Pediatric (infant / child)"
+    },
+    "note": "Cash or card accepted. A receipt is issued after each session for reimbursement by your private insurance. Osteopathy is not covered by the French Social Security."
+  },
+  "testimonials": {
+    "eyebrow": "Google Reviews",
+    "title": "What patients say",
+    "placeholder_title": "Your real Google reviews will appear here",
+    "placeholder_body": "Once 3-5 reviews are collected, the official Google Reviews widget will automatically display in this slot.",
+    "cta": "Create my Google Business profile"
+  },
+  "faq": {
+    "eyebrow": "Frequently asked questions",
+    "title": "Everything you need to know",
+    "items": [
+      {
+        "q": "How long is a session?",
+        "a": "An average consultation lasts 45 minutes. The first session may be slightly longer as it includes a full conversation about your history, lifestyle, and reasons for consulting."
+      },
+      {
+        "q": "What's the fee?",
+        "a": "Each consultation is €60 regardless of the reason. A receipt is provided after each session for potential reimbursement by your private insurance."
+      },
+      {
+        "q": "Is osteopathy covered by Social Security?",
+        "a": "No, osteopathy is not reimbursed by the French Social Security. Most private insurance plans (mutuelles) cover all or part of sessions (typically 2-6 sessions per year)."
+      },
+      {
+        "q": "Do I need a prescription?",
+        "a": "No. Osteopaths are first-line practitioners — you can book directly. If needed, the osteopath will refer you to another health professional."
+      },
+      {
+        "q": "From what age can someone consult?",
+        "a": "From birth. Newborns can be treated in the first days of life for common issues — positional cranial deformities, digestive trouble, restless sleep."
+      },
+      {
+        "q": "How many sessions should I expect?",
+        "a": "For an acute issue, 1 to 3 sessions are usually enough. For chronic or preventive follow-up, a rhythm of 2 to 4 sessions per year is appropriate."
+      },
+      {
+        "q": "Do you offer consultations in English?",
+        "a": "Yes. Matthieu speaks fluent English and welcomes English-speaking patients — tourists, expats, and international visitors. Online booking via Doctolib."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact & access",
+    "title": "Book an appointment",
+    "address": "Address",
+    "email": "Email",
+    "hours": "Opening hours",
+    "mon_fri": "Monday – Friday",
+    "sat": "Saturday",
+    "sun": "Sunday",
+    "closed": "Closed",
+    "cta": "Book on Doctolib"
+  },
+  "footer": {
+    "intro": "Osteopathy practice in the heart of Avignon. Manual, whole-body, personalized care. Consultations in French and English.",
+    "nav": "Navigation",
+    "legal": "Legal",
+    "privacy": "Privacy policy",
+    "accessibility": "Accessibility statement",
+    "rights": "All rights reserved."
+  }
+}

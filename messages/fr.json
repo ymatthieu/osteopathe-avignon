@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Ostéopathe Avignon — Matthieu Yeghiazarian, D.O. | RDV en ligne",
+    "description": "Matthieu Yeghiazarian, ostéopathe D.O. à Avignon (38 av. Saint-Ruf). 16 ans d'expérience. Approche manuelle et globale pour adultes, sportifs, femmes enceintes, enfants et nourrissons. Consultations en français et anglais. RDV en ligne sur Doctolib."
+  },
+  "nav": {
+    "approach": "Approche",
+    "services": "Services",
+    "about": "À propos",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "book": "Prendre RDV",
+    "menu": "Menu"
+  },
+  "hero": {
+    "eyebrow": "Cabinet d'ostéopathie • Avignon",
+    "title_line_1": "Matthieu Yeghiazarian,",
+    "title_line_2": "Ostéopathe D.O.",
+    "tagline_1": "Mouvement",
+    "tagline_2": "Précision",
+    "tagline_3": "Performance",
+    "cta_primary": "Prendre rendez-vous",
+    "cta_secondary": "Découvrir l'approche",
+    "scroll_hint": "Découvrir"
+  },
+  "principles": {
+    "eyebrow": "Notre approche",
+    "title": "Trois principes, une pratique",
+    "movement": {
+      "title": "Mouvement",
+      "body": "Le mouvement est au cœur de l'ostéopathie. Chaque séance s'intéresse à la manière dont le corps fonctionne dans sa globalité, afin d'identifier les restrictions et de restaurer la mobilité — pour des mouvements plus libres, plus fluides, plus naturels au quotidien."
+    },
+    "precision": {
+      "title": "Précision",
+      "body": "La prise en charge ostéopathique repose sur une observation attentive et des techniques manuelles précises. Chaque traitement est adapté à la personne, avec une attention particulière portée à la posture, à l'équilibre et aux réponses du corps."
+    },
+    "performance": {
+      "title": "Performance",
+      "body": "La performance ne se limite pas au sport. Elle concerne la capacité du corps à soutenir la vie quotidienne, le travail, la récupération et l'activité physique. L'ostéopathie aide le corps à fonctionner de manière efficace, aussi bien pour répondre aux exigences sportives que pour traverser les contraintes du quotidien."
+    }
+  },
+  "stats": {
+    "experience": "Années d'expérience",
+    "languages": "Langues parlées",
+    "session": "Durée de séance",
+    "fee": "Tarif unique",
+    "min": "min"
+  },
+  "services": {
+    "eyebrow": "Domaines de prise en charge",
+    "title": "Une ostéopathie pour chaque étape de la vie",
+    "items": {
+      "adults": {
+        "title": "Adultes & vie active",
+        "body": "Douleurs cervicales, dorsales, lombaires. Tendinopathies. Suites de traumatismes. Troubles posturaux liés au télétravail ou aux gestes répétitifs."
+      },
+      "sport": {
+        "title": "Sportifs",
+        "body": "Préparation à l'effort, optimisation du geste, récupération post-entraînement et prévention des blessures. Approche adaptée à votre discipline."
+      },
+      "pregnancy": {
+        "title": "Grossesse & post-partum",
+        "body": "Accompagnement durant les trois trimestres et après l'accouchement : douleurs lombaires, sciatique, troubles digestifs, récupération posturale."
+      },
+      "pediatric": {
+        "title": "Nourrissons & enfants",
+        "body": "Techniques douces dès la naissance : déformations crâniennes, troubles digestifs, sommeil agité, troubles ORL fréquents."
+      },
+      "seniors": {
+        "title": "Seniors",
+        "body": "Maintien de la mobilité, prévention des chutes, accompagnement des douleurs articulaires chroniques et des suites chirurgicales."
+      },
+      "english": {
+        "title": "English speakers",
+        "body": "Consultations entièrement en anglais pour patients internationaux, expatriés et touristes de passage à Avignon. Online booking via Doctolib."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "À propos",
+    "title": "Une pratique fondée sur l'expérience",
+    "lead": "Matthieu Yeghiazarian, ostéopathe D.O., met à profit plus de 16 ans d'expérience au service de ses patients.",
+    "body_1": "Diplômé du Collège d'Ostéopathie de Provence (Aix-Marseille), il a exercé en France et à l'étranger, auprès de patients aux profils variés. Sa pratique repose sur des techniques manuelles précises et une approche globale, fondées sur une connaissance approfondie de l'anatomie, de la biomécanique et du fonctionnement du corps humain.",
+    "body_2": "En dehors du cabinet, Matthieu pratique le jiu-jitsu brésilien, discipline exigeante qui nourrit son intérêt pour le mouvement, la biomécanique et la performance.",
+    "credentials": ["D.O. — Bac+5", "COP Aix-Marseille", "16+ ans", "FR / EN", "Pédiatrie • Sport • Grossesse"]
+  },
+  "pricing": {
+    "eyebrow": "Tarifs",
+    "title": "Transparent, sans surprise",
+    "consultation": "Consultation",
+    "duration": "Durée",
+    "fee": "Tarif",
+    "items": {
+      "adult": "Adulte",
+      "athlete": "Sportif",
+      "pregnancy": "Femme enceinte / post-partum",
+      "pediatric": "Pédiatrique (nourrisson / enfant)"
+    },
+    "note": "Paiement en espèces ou par carte bancaire. Une facture est remise après chaque séance pour permettre la prise en charge par votre mutuelle. L'ostéopathie n'est pas remboursée par la Sécurité sociale."
+  },
+  "testimonials": {
+    "eyebrow": "Avis Google",
+    "title": "La parole des patients",
+    "placeholder_title": "Vos vrais avis Google apparaîtront ici",
+    "placeholder_body": "Une fois 3-5 avis collectés, le widget Google Reviews officiel s'affichera automatiquement à cet emplacement.",
+    "cta": "Créer ma fiche Google Business"
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "title": "Tout ce qu'il faut savoir",
+    "items": [
+      {
+        "q": "Combien dure une séance ?",
+        "a": "Une consultation dure en moyenne 45 minutes. La première séance peut être un peu plus longue car elle inclut un entretien complet sur vos antécédents, votre mode de vie et vos motifs de consultation."
+      },
+      {
+        "q": "Quel est le tarif ?",
+        "a": "La consultation est à 60 € quel que soit le motif. Une facture vous est remise pour vous permettre une éventuelle prise en charge par votre mutuelle."
+      },
+      {
+        "q": "L'ostéopathie est-elle remboursée par la Sécurité sociale ?",
+        "a": "Non, l'ostéopathie n'est pas remboursée par l'Assurance Maladie. La majorité des mutuelles couvrent tout ou partie des séances (généralement de 2 à 6 séances par an)."
+      },
+      {
+        "q": "Faut-il une ordonnance ?",
+        "a": "Non. L'ostéopathe est un praticien de première intention : vous pouvez consulter directement. Si nécessaire, l'ostéopathe vous orientera vers un autre professionnel de santé."
+      },
+      {
+        "q": "À partir de quel âge peut-on consulter ?",
+        "a": "Dès la naissance. Les nourrissons peuvent être pris en charge dès les premiers jours de vie pour des troubles fréquents (déformations crâniennes, troubles digestifs, sommeil agité)."
+      },
+      {
+        "q": "Combien de séances faut-il prévoir ?",
+        "a": "Pour une douleur ponctuelle, 1 à 3 séances suffisent généralement. Pour un suivi chronique ou préventif, un rythme de 2 à 4 séances par an est adapté."
+      },
+      {
+        "q": "Do you offer consultations in English?",
+        "a": "Yes. Matthieu speaks fluent English and welcomes English-speaking patients — tourists, expats, and international visitors. Online booking via Doctolib."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact & accès",
+    "title": "Prendre rendez-vous",
+    "address": "Adresse",
+    "email": "Email",
+    "hours": "Horaires d'ouverture",
+    "mon_fri": "Lundi – Vendredi",
+    "sat": "Samedi",
+    "sun": "Dimanche",
+    "closed": "Fermé",
+    "cta": "Prendre RDV sur Doctolib"
+  },
+  "footer": {
+    "intro": "Cabinet d'ostéopathie au cœur d'Avignon. Approche manuelle, globale et personnalisée. Consultations en français et anglais.",
+    "nav": "Navigation",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "accessibility": "Déclaration d'accessibilité",
+    "rights": "Tous droits réservés."
+  }
+}
