@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/reveal";
+import Image from "next/image";
 
 export function About() {
   const t = useTranslations("about");
@@ -12,15 +13,15 @@ export function About() {
       <div className="container max-w-6xl">
         <div className="grid md:grid-cols-12 gap-12 md:gap-20 items-start">
           <Reveal className="md:col-span-5">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-gradient-to-br from-[#1a1a1f] to-[#2a2a2f] shadow-soft">
-              {/* TODO: replace placeholder with <Image src="/images/matthieu-portrait.jpg" /> */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-cream-50/40 text-center p-8">
-                <div className="font-serif text-7xl"
-                     style={{ fontVariationSettings: "'wght' 480, 'opsz' 144, 'SOFT' 100" }}>
-                  MY
-                </div>
-                <div className="mt-3 text-xs uppercase tracking-[0.18em]">Portrait</div>
-              </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-[#1a1a1f] shadow-soft">
+              <Image
+                src="/images/matthieu-portrait.jpg"
+                alt="Matthieu Yeghiazarian, Ostéopathe D.O."
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 42vw"
+                className="object-cover"
+              />
             </div>
           </Reveal>
 
