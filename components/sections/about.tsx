@@ -15,7 +15,7 @@ export function About() {
           <Reveal className="md:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-[#1a1a1f] shadow-soft">
               <Image
-                src="/images/matthieu-portrait.jpg"
+                src="/images/Aragon-Headshot-Matthieu-Yeghiazarian-2026-03-23-61.jpeg"
                 alt="Matthieu Yeghiazarian, Ostéopathe D.O."
                 fill
                 priority
