@@ -9,8 +9,6 @@ import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { ScrollProgress } from "@/components/marketing/scroll-progress";
 import { StickyCta } from "@/components/marketing/sticky-cta";
-import { CustomCursor } from "@/components/effects/custom-cursor";
-import { IntroOverlay } from "@/components/effects/intro-overlay";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -25,48 +23,30 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "meta" });
   const isFr = locale === "fr";
   const url = `${SITE.url}${isFr ? "" : "/en"}`;
-
   return {
     title: { default: t("title"), template: `%s | ${SITE.shortName}` },
     description: t("description"),
     alternates: {
       canonical: url,
       languages: {
-        fr: SITE.url,
-        "fr-FR": SITE.url,
-        en: `${SITE.url}/en`,
-        "en-GB": `${SITE.url}/en`,
-        "en-US": `${SITE.url}/en`,
+        fr: SITE.url, "fr-FR": SITE.url,
+        en: `${SITE.url}/en`, "en-GB": `${SITE.url}/en`, "en-US": `${SITE.url}/en`,
         "x-default": SITE.url,
       },
     },
     openGraph: {
-      type: "website",
-      locale: isFr ? "fr_FR" : "en_US",
+      type: "website", locale: isFr ? "fr_FR" : "en_US",
       alternateLocale: isFr ? ["en_US"] : ["fr_FR"],
-      url,
-      siteName: SITE.name,
-      title: t("title"),
-      description: t("description"),
+      url, siteName: SITE.name, title: t("title"), description: t("description"),
       images: [{ url: "/images/og.svg", width: 1200, height: 630, alt: SITE.shortName }],
     },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-      images: ["/images/og.svg"],
-    },
+    twitter: { card: "summary_large_image", title: t("title"), description: t("description"), images: ["/images/og.svg"] },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
-    other: {
-      "ai-content-summary": "/llms.txt",
-      "ai-content-markdown": "/page.md",
-    },
   };
 }
 
 export default async function LocaleLayout({
-  children,
-  params,
+  children, params,
 }: {
   children: ReactNode;
   params: Promise<{ locale: string }>;
@@ -83,30 +63,18 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": ["MedicalBusiness", "LocalBusiness"],
     "@id": `${SITE.url}/#localbusiness`,
-    name: SITE.name,
-    description: tMeta("description"),
-    url: SITE.url,
-    image: [`${SITE.url}/images/og.svg`],
-    email: SITE.email,
-    priceRange: "€€",
+    name: SITE.name, description: tMeta("description"),
+    url: SITE.url, image: [`${SITE.url}/images/og.svg`],
+    email: SITE.email, priceRange: "€€",
     address: {
       "@type": "PostalAddress",
-      streetAddress: SITE.address.street,
-      addressLocality: SITE.address.city,
-      addressRegion: "Vaucluse",
-      postalCode: SITE.address.postalCode,
+      streetAddress: SITE.address.street, addressLocality: SITE.address.city,
+      addressRegion: "Vaucluse", postalCode: SITE.address.postalCode,
       addressCountry: SITE.address.country,
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: SITE.address.latitude,
-      longitude: SITE.address.longitude,
-    },
+    geo: { "@type": "GeoCoordinates", latitude: SITE.address.latitude, longitude: SITE.address.longitude },
     openingHoursSpecification: SITE.hours.map((h) => ({
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: h.day,
-      opens: h.opens,
-      closes: h.closes,
+      "@type": "OpeningHoursSpecification", dayOfWeek: h.day, opens: h.opens, closes: h.closes,
     })),
     availableLanguage: [
       { "@type": "Language", name: "French" },
@@ -121,29 +89,9 @@ export default async function LocaleLayout({
     sameAs: [SITE.doctolib.url],
   };
 
-  const personSchema = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": `${SITE.url}/#person`,
-    name: "Matthieu Yeghiazarian",
-    honorificSuffix: "D.O.",
-    jobTitle: isFr ? "Ostéopathe D.O." : "Osteopath D.O.",
-    image: `${SITE.url}/images/matthieu-portrait.jpg`,
-    url: `${SITE.url}/about`,
-    email: SITE.email,
-    worksFor: { "@id": `${SITE.url}/#localbusiness` },
-    alumniOf: {
-      "@type": "EducationalOrganization",
-      name: "Collège d'Ostéopathie de Provence",
-    },
-    sameAs: [SITE.doctolib.url],
-  };
-
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
       <a className="skip-link" href="#main">Passer au contenu principal</a>
-      <IntroOverlay />
-      <CustomCursor />
       <ScrollProgress />
       <Nav />
       <main id="main">{children}</main>
@@ -152,10 +100,6 @@ export default async function LocaleLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
     </NextIntlClientProvider>
   );

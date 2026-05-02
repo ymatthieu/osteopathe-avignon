@@ -3,53 +3,27 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%;
-  }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 
   body {
-    @apply bg-cream-100 text-ink antialiased;
+    @apply bg-cream-50 text-ink antialiased;
     font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
   }
 
-  @media (hover: hover) and (pointer: fine) {
-    html, body, * {
-      cursor: none !important;
-    }
-  }
-
   @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
-    html, body, * { cursor: auto !important; }
   }
 
-  ::selection {
-    @apply bg-olive-800 text-cream-50;
-  }
-
-  :focus-visible {
-    @apply outline-2 outline-offset-2 outline-olive-700;
-    cursor: auto !important;
-  }
+  ::selection { @apply bg-olive-700 text-cream-50; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-olive-700; }
 
   .skip-link {
     @apply absolute -top-24 left-0 z-[210] bg-olive-800 px-4 py-2 text-cream-50 transition-all focus:top-0;
-  }
-
-  /* Variable-font hero title — reads CSS vars set by Hero parent */
-  .hero-title {
-    font-variation-settings:
-      "wght" var(--wght, 500),
-      "opsz" var(--opsz, 144),
-      "SOFT" var(--soft, 50);
   }
 }
 

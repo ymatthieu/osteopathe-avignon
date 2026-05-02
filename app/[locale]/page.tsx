@@ -1,10 +1,9 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Hero } from "@/components/sections/hero";
-import { Principles } from "@/components/sections/principles";
-import { Anatomy } from "@/components/sections/anatomy";
 import { Stats } from "@/components/sections/stats";
-import { Services } from "@/components/sections/services";
 import { About } from "@/components/sections/about";
+import { Principles } from "@/components/sections/principles";
+import { Services } from "@/components/sections/services";
 import { Pricing } from "@/components/sections/pricing";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
@@ -33,20 +32,16 @@ export default async function HomePage({
   return (
     <>
       <Hero />
-      <Principles />
-      <Anatomy />
-      <Services />
       <Stats />
       <About />
+      <Principles />
+      <Services />
       <Pricing />
       <Testimonials />
       <Faq />
       <Contact />
-
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      <script type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     </>
   );
 }

@@ -2,63 +2,49 @@
 
 import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/reveal";
-import { HoverSpotlightCard } from "@/components/effects/hover-spotlight-card";
-import { Heart, Baby, Users, Globe2, Trophy } from "lucide-react";
+import { Heart, Baby, Users, Globe2, Trophy, Sparkles } from "lucide-react";
 
 const items = [
-  { key: "adults", n: "01", Icon: Heart },
-  { key: "sport", n: "02", Icon: Trophy },
-  { key: "pregnancy", n: "03", Icon: Heart },
-  { key: "pediatric", n: "04", Icon: Baby },
-  { key: "seniors", n: "05", Icon: Users },
-  { key: "english", n: "06", Icon: Globe2 },
+  { key: "adults", Icon: Heart },
+  { key: "sport", Icon: Trophy },
+  { key: "pregnancy", Icon: Sparkles },
+  { key: "pediatric", Icon: Baby },
+  { key: "seniors", Icon: Users },
+  { key: "english", Icon: Globe2 },
 ] as const;
 
 export function Services() {
   const t = useTranslations("services");
-
   return (
-    <section id="services" className="relative bg-cream-100 py-32 md:py-44">
-      <div className="container">
-        <div className="grid md:grid-cols-[2fr_3fr] gap-12 mb-20 items-end">
-          <div>
-            <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-olive-700 mb-6">
-              §02 · {t("eyebrow")}
-            </div>
-            <h2 className="font-serif text-[clamp(2.4rem,6vw,5.5rem)] leading-[0.95] tracking-[-0.02em] text-olive-800"
-                style={{ fontVariationSettings: "'opsz' 144, 'wght' 460, 'SOFT' 60, 'WONK' 1" }}>
+    <section id="services" className="bg-cream-100 py-32 md:py-40">
+      <div className="container max-w-6xl">
+        <Reveal>
+          <div className="text-center max-w-2xl mx-auto mb-20">
+            <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-olive-700/80">
+              {t("eyebrow")}
+            </span>
+            <h2 className="mt-4 font-serif text-4xl md:text-5xl text-olive-800 leading-tight"
+                style={{ fontVariationSettings: "'wght' 460, 'opsz' 144, 'SOFT' 60" }}>
               {t("title")}
             </h2>
           </div>
-          <div className="font-mono text-sm text-ink/70 leading-relaxed max-w-md justify-self-end">
-            Une approche manuelle, pensée séance après séance — jamais protocolaire. Six profils, une seule attention&nbsp;: la vôtre.
-          </div>
-        </div>
+        </Reveal>
 
-        <div className="grid gap-px bg-ink/10 border-y border-ink/10 md:grid-cols-2 lg:grid-cols-3">
-          {items.map(({ key, n, Icon }, i) => (
-            <Reveal key={key} delay={Math.min(i * 0.05, 0.25)}>
-              <HoverSpotlightCard className="h-full">
-                <div data-cursor="link" className="flex h-full flex-col p-10 md:p-12 min-h-[320px] bg-cream-100">
-                  <div className="flex items-start justify-between mb-10">
-                    <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-olive-700/70">
-                      {n}
-                    </span>
-                    <Icon className="size-5 text-olive-700/50" strokeWidth={1.2} />
-                  </div>
-                  <h3 className="font-serif text-3xl md:text-4xl text-olive-800 leading-tight"
-                      style={{ fontVariationSettings: "'opsz' 96, 'wght' 480, 'SOFT' 80" }}>
-                    {t(`items.${key}.title`)}
-                  </h3>
-                  <p className="mt-5 text-sm leading-relaxed text-ink/75">
-                    {t(`items.${key}.body`)}
-                  </p>
-                  <div className="mt-auto pt-8 flex items-center gap-2 text-[10px] uppercase tracking-[0.24em] font-mono text-olive-700">
-                    <span>Voir séance</span>
-                    <span className="block h-px w-8 bg-olive-700/40 group-hover:w-16 transition-all"/>
-                  </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map(({ key, Icon }, i) => (
+            <Reveal key={key} delay={Math.min(i * 0.06, 0.25)}>
+              <article className="group h-full rounded-md border border-olive-700/10 bg-cream-50 p-8 transition-all hover:border-olive-700/30 hover:shadow-soft">
+                <div className="mb-5 inline-flex items-center justify-center size-10 rounded-full bg-olive-100/60 text-olive-700">
+                  <Icon className="size-4" strokeWidth={1.5} />
                 </div>
-              </HoverSpotlightCard>
+                <h3 className="font-serif text-xl text-olive-800 mb-3"
+                    style={{ fontVariationSettings: "'wght' 500, 'opsz' 96, 'SOFT' 80" }}>
+                  {t(`items.${key}.title`)}
+                </h3>
+                <p className="text-sm leading-relaxed text-ink/70">
+                  {t(`items.${key}.body`)}
+                </p>
+              </article>
             </Reveal>
           ))}
         </div>
