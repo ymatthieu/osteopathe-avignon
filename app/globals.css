@@ -43,6 +43,14 @@
   .skip-link {
     @apply absolute -top-24 left-0 z-[210] bg-olive-800 px-4 py-2 text-cream-50 transition-all focus:top-0;
   }
+
+  /* Variable-font hero title — reads CSS vars set by Hero parent */
+  .hero-title {
+    font-variation-settings:
+      "wght" var(--wght, 500),
+      "opsz" var(--opsz, 144),
+      "SOFT" var(--soft, 50);
+  }
 }
 
 @layer utilities {

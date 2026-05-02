@@ -13,19 +13,24 @@ export function Hero() {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
 
+  // Scroll-driven font-variation morph applied via CSS variables
+  // (avoids conflict with Framer Motion `animate.y` on the same element)
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const wght = useTransform(scrollYProgress, [0, 1], [580, 320]);
   const opsz = useTransform(scrollYProgress, [0, 1], [144, 80]);
   const soft = useTransform(scrollYProgress, [0, 1], [40, 100]);
-  const fvs = useTransform([wght, opsz, soft], ([w, o, s]) =>
-    `'wght' ${w}, 'opsz' ${o}, 'SOFT' ${s}`
-  );
   const tagY = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <section
+    <motion.section
       ref={ref}
       className="relative isolate min-h-[100svh] overflow-hidden flex items-end pb-24 md:pb-40"
+      style={{
+        // Plumb axes as CSS variables — h1s read them via inline style.
+        ["--wght" as string]: wght,
+        ["--opsz" as string]: opsz,
+        ["--soft" as string]: soft,
+      }}
     >
       <BreathingOrganism />
 
@@ -56,8 +61,7 @@ export function Hero() {
               initial={reduce ? false : { y: "110%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1.1, ease: [0.2, 0.7, 0.2, 1], delay: 0.2 }}
-              style={{ fontVariationSettings: fvs }}
-              className="font-serif text-[clamp(3.2rem,11vw,12rem)] leading-[0.92] tracking-[-0.02em] text-olive-800"
+              className="hero-title font-serif text-[clamp(3.2rem,11vw,12rem)] leading-[0.92] tracking-[-0.02em] text-olive-800"
             >
               Matthieu
             </motion.h1>
@@ -67,8 +71,7 @@ export function Hero() {
               initial={reduce ? false : { y: "110%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1.1, ease: [0.2, 0.7, 0.2, 1], delay: 0.34 }}
-              style={{ fontVariationSettings: fvs }}
-              className="font-serif italic text-[clamp(3.2rem,11vw,12rem)] leading-[0.92] tracking-[-0.02em] text-olive-700/95"
+              className="hero-title font-serif italic text-[clamp(3.2rem,11vw,12rem)] leading-[0.92] tracking-[-0.02em] text-olive-700/95"
             >
               Yeghiazarian.
             </motion.h1>
@@ -124,6 +127,6 @@ export function Hero() {
         <span>{t("scroll_hint")}</span>
         <span>60 € · 45 min · sur RDV</span>
       </div>
-    </section>
+    </motion.section>
   );
 }
