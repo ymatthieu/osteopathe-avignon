@@ -1,20 +1,23 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
+import Link from "next/link";
 import { Reveal } from "@/components/ui/reveal";
-import { Heart, Baby, Users, Globe2, Trophy, Sparkles } from "lucide-react";
+import { Heart, Baby, Users, Globe2, Trophy, Sparkles, ArrowRight } from "lucide-react";
 
 const items = [
-  { key: "adults", Icon: Heart },
-  { key: "sport", Icon: Trophy },
-  { key: "pregnancy", Icon: Sparkles },
-  { key: "pediatric", Icon: Baby },
-  { key: "seniors", Icon: Users },
-  { key: "english", Icon: Globe2 },
+  { key: "adults", Icon: Heart, href: null },
+  { key: "sport", Icon: Trophy, href: null },
+  { key: "pregnancy", Icon: Sparkles, href: null },
+  { key: "pediatric", Icon: Baby, href: "/nourrissons-enfants" },
+  { key: "seniors", Icon: Users, href: null },
+  { key: "english", Icon: Globe2, href: null },
 ] as const;
 
 export function Services() {
   const t = useTranslations("services");
+  const locale = useLocale();
+  const prefix = locale === "fr" ? "" : `/${locale}`;
   return (
     <section id="services" className="bg-cream-100 py-32 md:py-40">
       <div className="container max-w-6xl">
@@ -31,9 +34,9 @@ export function Services() {
         </Reveal>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {items.map(({ key, Icon }, i) => (
+          {items.map(({ key, Icon, href }, i) => (
             <Reveal key={key} delay={Math.min(i * 0.06, 0.25)}>
-              <article className="group h-full rounded-md border border-olive-700/10 bg-cream-50 p-8 transition-all hover:border-olive-700/30 hover:shadow-soft">
+              <article className="group h-full rounded-md border border-olive-700/10 bg-cream-50 p-8 transition-all hover:border-olive-700/30 hover:shadow-soft flex flex-col">
                 <div className="mb-5 inline-flex items-center justify-center size-10 rounded-full bg-olive-100/60 text-olive-700">
                   <Icon className="size-4" strokeWidth={1.5} />
                 </div>
@@ -41,9 +44,20 @@ export function Services() {
                     style={{ fontVariationSettings: "'wght' 500, 'opsz' 96, 'SOFT' 80" }}>
                   {t(`items.${key}.title`)}
                 </h3>
-                <p className="text-sm leading-relaxed text-ink/70">
+                <p className="text-sm leading-relaxed text-ink/70 flex-grow">
                   {t(`items.${key}.body`)}
                 </p>
+                {href && (
+                  <Link
+                    href={`${prefix}${href}`}
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm text-olive-700 hover:text-olive-800 transition group/link"
+                  >
+                    <span className="border-b border-olive-700/30 group-hover/link:border-olive-700">
+                      {locale === "fr" ? "En savoir plus" : "Learn more"}
+                    </span>
+                    <ArrowRight className="size-3.5 transition-transform group-hover/link:translate-x-0.5" strokeWidth={1.8} />
+                  </Link>
+                )}
               </article>
             </Reveal>
           ))}
