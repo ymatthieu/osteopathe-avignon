@@ -1,18 +1,12 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/utils";
 
-/**
- * Sitemap — only routes that actually exist as pages.
- * Section-anchor URLs (#about, #services etc.) are NOT separate URLs and must
- * not be in here, or Search Console will report 404s.
- *
- * As real subpages are added (e.g. /services/pediatrie, /blog/...), add them here.
- */
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   const routes = [
     { path: "", priority: 1.0, changeFrequency: "monthly" as const },
+    { path: "/services/pediatrie", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/privacy", priority: 0.3, changeFrequency: "yearly" as const },
     { path: "/accessibility", priority: 0.3, changeFrequency: "yearly" as const },
     { path: "/mentions-legales", priority: 0.3, changeFrequency: "yearly" as const },
