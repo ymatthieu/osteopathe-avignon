@@ -25,7 +25,7 @@ La performance ne se limite pas au sport. Elle concerne la capacité du corps à
 - 16+ ans d'expérience
 - Diplômé du Collège d'Ostéopathie de Provence (Aix-Marseille)
 - Pratique en France et à l'étranger
-- Spécialisations : pédiatrie, sport, grossesse, posture
+- Patients reçus : adultes, sportifs, femmes enceintes, nourrissons et enfants (en complément du suivi médical)
 - Passion personnelle : jiu-jitsu brésilien
 
 ## Horaires

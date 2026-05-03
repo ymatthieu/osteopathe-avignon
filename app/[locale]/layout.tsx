@@ -33,7 +33,6 @@ export async function generateMetadata({
           "ostéopathe Avignon",
           "ostéopathie Avignon",
           "ostéopathe 84000",
-          "ostéopathe pédiatrique Avignon",
           "ostéopathe sport Avignon",
           "ostéopathe grossesse Avignon",
           "ostéopathe nourrisson Avignon",
@@ -48,7 +47,6 @@ export async function generateMetadata({
           "english speaking osteopath Avignon",
           "osteopath France",
           "Matthieu Yeghiazarian",
-          "pediatric osteopath Avignon",
           "sports osteopath Avignon",
           "pregnancy osteopath Avignon",
           "osteopathy Provence",
@@ -127,7 +125,7 @@ export default async function LocaleLayout({
   const isFr = locale === "fr";
   const pageUrl = `${SITE.url}${isFr ? "" : "/en"}`;
   const personDescription = isFr
-    ? "Ostéopathe D.O. à Avignon depuis 16+ ans. Diplômé du Collège d'Ostéopathie de Provence (Aix-Marseille). Approche manuelle, globale et personnalisée. Pédiatrie, sport, grossesse, adultes. Consultations en français et en anglais."
+    ? "Ostéopathe D.O. à Avignon depuis 16+ ans. Diplômé du Collège d'Ostéopathie de Provence (Aix-Marseille). Approche manuelle, globale et personnalisée. Adultes, sportifs, femmes enceintes, nourrissons et enfants. Consultations en français et en anglais. L'ostéopathie ne se substitue pas à un avis médical."
     : "English-speaking osteopath D.O. in Avignon, France. 16+ years of experience. Graduate of Collège d'Ostéopathie de Provence (Aix-Marseille). Whole-body, hands-on, personalized care for adults, athletes, expectant mothers, infants and children.";
 
   const graph = [
@@ -184,12 +182,10 @@ export default async function LocaleLayout({
         { "@type": "Language", name: "French", alternateName: "fr" },
         { "@type": "Language", name: "English", alternateName: "en" },
       ],
-      medicalSpecialty: ["Osteopathic", "Pediatric", "SportsMedicine", "Obstetric"],
+      medicalSpecialty: ["Osteopathic"],
       knowsAbout: [
         "Ostéopathie générale",
-        "Ostéopathie pédiatrique",
         "Ostéopathie du sport",
-        "Ostéopathie périnatale",
         "Biomécanique",
         "Mobilité articulaire",
         "Posture",
@@ -273,9 +269,7 @@ export default async function LocaleLayout({
       ],
       knowsAbout: [
         "Ostéopathie",
-        "Ostéopathie pédiatrique",
         "Ostéopathie du sport",
-        "Ostéopathie périnatale",
         "Biomécanique",
         "Mobilité articulaire",
         "Jiu-jitsu brésilien",

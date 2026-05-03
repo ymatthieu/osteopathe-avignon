@@ -25,7 +25,7 @@ Performance is not just sport. It is the body's ability to support daily life, w
 - 16+ years of experience
 - Graduate of Collège d'Ostéopathie de Provence (Aix-en-Provence / Marseille) — French 5-year national diploma
 - Practiced in France and abroad
-- Specializations: pediatrics, sport, pregnancy, posture
+- Patients seen: adults, athletes, expectant mothers, infants and children (complementary to medical follow-up)
 - Personal practice: Brazilian jiu-jitsu — fuels his interest in movement, biomechanics and performance
 
 ## Hours

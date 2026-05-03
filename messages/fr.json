@@ -67,7 +67,7 @@
       },
       "pediatric": {
         "title": "Nourrissons & enfants",
-        "body": "Techniques douces dès la naissance : déformations crâniennes, troubles digestifs, sommeil agité, troubles ORL fréquents."
+        "body": "Approche manuelle douce adaptée à chaque âge, en complément du suivi médical de l'enfant. Voir la page dédiée nourrissons et enfants."
       },
       "seniors": {
         "title": "Seniors",
@@ -85,7 +85,13 @@
     "lead": "Matthieu Yeghiazarian, ostéopathe D.O., met à profit plus de 16 ans d'expérience au service de ses patients.",
     "body_1": "Diplômé du Collège d'Ostéopathie de Provence (Aix-Marseille), il a exercé en France et à l'étranger, auprès de patients aux profils variés. Sa pratique repose sur des techniques manuelles précises et une approche globale, fondées sur une connaissance approfondie de l'anatomie, de la biomécanique et du fonctionnement du corps humain.",
     "body_2": "En dehors du cabinet, Matthieu pratique le jiu-jitsu brésilien, discipline exigeante qui nourrit son intérêt pour le mouvement, la biomécanique et la performance.",
-    "credentials": ["D.O. — Bac+5", "COP Aix-Marseille", "16+ ans", "FR / EN", "Pédiatrie • Sport • Grossesse"]
+    "credentials": [
+      "D.O. — Bac+5",
+      "COP Aix-Marseille",
+      "16+ ans",
+      "FR / EN",
+      "Sport • Grossesse"
+    ]
   },
   "pricing": {
     "eyebrow": "Tarifs",
@@ -97,7 +103,7 @@
       "adult": "Adulte",
       "athlete": "Sportif",
       "pregnancy": "Femme enceinte / post-partum",
-      "pediatric": "Pédiatrique (nourrisson / enfant)"
+      "pediatric": "Nourrisson / enfant"
     },
     "note": "Paiement en espèces ou par carte bancaire. Une facture est remise après chaque séance pour permettre la prise en charge par votre mutuelle. L'ostéopathie n'est pas remboursée par la Sécurité sociale."
   },
@@ -130,7 +136,7 @@
       },
       {
         "q": "À partir de quel âge peut-on consulter ?",
-        "a": "Dès la naissance. Les nourrissons peuvent être pris en charge dès les premiers jours de vie pour des troubles fréquents (déformations crâniennes, troubles digestifs, sommeil agité)."
+        "a": "Dès la naissance. Pour les nourrissons et enfants, l'approche est exclusivement manuelle et douce, en complément du suivi médical. L'ostéopathie ne se substitue pas à un avis médical : pour tout symptôme persistant chez votre enfant, consultez en priorité votre médecin traitant ou votre pédiatre."
       },
       {
         "q": "Combien de séances faut-il prévoir ?",

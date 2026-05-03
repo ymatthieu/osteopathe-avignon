@@ -67,7 +67,7 @@
       },
       "pediatric": {
         "title": "Infants & children",
-        "body": "Gentle, age-appropriate techniques from birth: positional cranial deformities, reflux, restless sleep, recurring ENT issues."
+        "body": "Gentle, age-appropriate hands-on approach, complementary to the child's medical follow-up. See the dedicated infants & children page."
       },
       "seniors": {
         "title": "Seniors",
@@ -85,7 +85,13 @@
     "lead": "Matthieu Yeghiazarian, osteopath D.O., draws on more than 16 years of experience caring for his patients.",
     "body_1": "A graduate of the College of Osteopathy of Provence (Aix-Marseille), he has practised in France and abroad with patients of all profiles. His work is grounded in precise hands-on technique and a whole-body approach, built on a deep understanding of anatomy, biomechanics, and how the body works.",
     "body_2": "Outside the practice, Matthieu trains in Brazilian jiu-jitsu — a demanding discipline that nourishes his interest in movement, biomechanics, and performance.",
-    "credentials": ["D.O. — Bac+5", "COP Aix-Marseille", "16+ years", "FR / EN", "Pediatrics • Sports • Pregnancy"]
+    "credentials": [
+      "D.O. — Bac+5",
+      "COP Aix-Marseille",
+      "16+ years",
+      "FR / EN",
+      "Sports • Pregnancy"
+    ]
   },
   "pricing": {
     "eyebrow": "Fees",
@@ -97,7 +103,7 @@
       "adult": "Adult",
       "athlete": "Athlete",
       "pregnancy": "Pregnancy / post-partum",
-      "pediatric": "Pediatric (infant / child)"
+      "pediatric": "Infant / child"
     },
     "note": "Cash or card accepted. A receipt is issued after each session for reimbursement by your private insurance. Osteopathy is not covered by the French Social Security."
   },
@@ -130,7 +136,7 @@
       },
       {
         "q": "From what age can someone consult?",
-        "a": "From birth. Newborns can be cared for in the first days of life for common issues such as positional cranial deformities, digestive troubles, or restless sleep."
+        "a": "From birth. For infants and children, the approach is exclusively gentle and hands-on, complementary to medical follow-up. Osteopathy does not replace medical advice: for any persistent symptoms in your child, please consult your primary care physician or pediatrician first."
       },
       {
         "q": "How many sessions are typically needed?",
