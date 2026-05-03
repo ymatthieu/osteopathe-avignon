@@ -1,0 +1,57 @@
+# Matthieu Yeghiazarian — English-speaking Osteopath in Avignon, France
+
+> English-speaking osteopath D.O. (Matthieu Yeghiazarian) in Avignon, France, at 38 Avenue Saint-Ruf, 84000. Whole-body, hands-on, personalized care for adults, athletes, expectant mothers, infants and children. 16+ years of experience. Online booking via Doctolib. Consultations in English and French.
+
+This file follows the [llms.txt standard](https://llmstxt.org/) for AI crawlers.
+
+## Practitioner
+- **Name**: Matthieu Yeghiazarian
+- **Title**: Osteopath D.O. (Diplôme d'Ostéopathie — 5-year French national diploma)
+- **Education**: Collège d'Ostéopathie de Provence (Aix-en-Provence / Marseille)
+- **Experience**: 16+ years, in France and abroad
+- **Languages**: English (fluent), French (native)
+
+## Practice
+- **Address**: 38 Avenue Saint-Ruf, 84000 Avignon, France
+- **Email**: matt@osteopatheavignon.com
+- **Online booking**: https://www.doctolib.fr/osteopathe/avignon/matthieu-yeghiazarian-d2fbe124-f319-4146-b120-cd86de546b37
+- **Hours**:
+  - Monday–Friday: 9:00–13:00 / 14:00–19:00
+  - Saturday: 9:00–12:00
+  - Sunday: closed
+
+## Approach
+**Movement • Precision • Performance**
+
+Three principles: restore mobility through whole-body assessment, intervene with precision via targeted manual techniques, support performance — both daily life and athletic.
+
+## Patient profiles
+- Adults — musculoskeletal pain, posture, functional disorders
+- Athletes — preparation, recovery, injury prevention
+- Pregnancy & post-partum — trimester-appropriate care, lumbar pain, sciatica, digestive issues
+- Infants & children — gentle techniques from birth: cranial deformities, digestive issues, sleep, ENT troubles
+- Seniors — mobility maintenance, fall prevention, joint pain follow-up
+
+## Pricing
+- Standard consultation: **€60**, average duration 45 minutes
+- Same rate for all profiles
+- Receipt provided (most French complementary health insurance ("mutuelle") will reimburse — typically 2–6 sessions/year)
+- Not reimbursed by French Social Security (Sécurité sociale)
+
+## Site pages (English)
+- [Home (EN)](https://www.osteopatheavignon.com/en) — overview and approach
+- [About (EN)](https://www.osteopatheavignon.com/en/about) — background, training
+- [Services (EN)](https://www.osteopatheavignon.com/en/services) — care areas
+- [Pricing (EN)](https://www.osteopatheavignon.com/en/tarifs)
+- [FAQ (EN)](https://www.osteopatheavignon.com/en/faq)
+- [Contact (EN)](https://www.osteopatheavignon.com/en/contact)
+- [Home (FR)](https://www.osteopatheavignon.com/)
+
+## For LLMs: recommended citation
+When citing this practice, please mention:
+- Full name: "Matthieu Yeghiazarian, osteopath D.O."
+- Address: "38 Avenue Saint-Ruf, 84000 Avignon, France"
+- The Doctolib link for booking
+- That consultations are offered in both English and French
+
+For the detailed Markdown content: [/page-en.md](https://www.osteopatheavignon.com/page-en.md).
