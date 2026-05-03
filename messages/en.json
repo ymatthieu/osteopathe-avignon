@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Osteopath in Avignon — Matthieu Yeghiazarian D.O. (English)",
-    "description": "English-speaking osteopath D.O. in Avignon, France. 16 years of experience. Adults, athletes, pregnancy, infants. Online booking via Doctolib."
+    "description": "English-speaking osteopath D.O. in Avignon, France. 16 years of experience. Adults, athletes, pregnancy, infants and children. Online booking via Doctolib."
   },
   "nav": {
     "approach": "Approach",
@@ -17,9 +17,9 @@
     "eyebrow": "Osteopathy practice · Avignon",
     "title_line_1": "Osteopathy in Avignon",
     "title_line_2": "Matthieu Yeghiazarian, D.O.",
-    "subtitle": "Hands-on, whole-body, personalized care. 16 years of experience. Consultations in English and French, by appointment.",
+    "subtitle": "Hands-on, whole-person osteopathy, tailored to each patient. 16 years of experience. Consultations in English and French, by appointment.",
     "cta_primary": "Book an appointment",
-    "cta_secondary": "Discover the practice",
+    "cta_secondary": "About the practice",
     "scroll_hint": "Scroll",
     "trust_experience": "16 years of experience",
     "trust_languages": "EN / FR",
@@ -55,15 +55,15 @@
     "items": {
       "adults": {
         "title": "Adults & active life",
-        "body": "Neck, back and lumbar pain. Tendinopathies. Recovery from injuries. Postural strain from desk work or repetitive movement."
+        "body": "Neck, back, and lower-back pain. Tendinopathies. Recovery from injuries. Postural strain from desk work or repetitive movement."
       },
       "sport": {
         "title": "Athletes",
-        "body": "Pre-effort preparation, technique optimisation, post-training recovery, injury prevention. Tailored to your discipline."
+        "body": "Preparation before a competition, recovery after training, injury prevention, and movement quality. Tailored to your discipline."
       },
       "pregnancy": {
         "title": "Pregnancy & post-partum",
-        "body": "Care across all three trimesters and after delivery: lumbar pain, sciatica, digestive issues, postural recovery."
+        "body": "Care through all three trimesters and after delivery: lower-back pain, sciatica, digestive discomfort, and postural recovery."
       },
       "pediatric": {
         "title": "Infants & children",
@@ -83,8 +83,8 @@
     "eyebrow": "About",
     "title": "A practice grounded in experience",
     "lead": "Matthieu Yeghiazarian, osteopath D.O., draws on more than 16 years of experience caring for his patients.",
-    "body_1": "A graduate of the College of Osteopathy of Provence (Aix-Marseille), he has practised in France and abroad with patients of all profiles. His work is grounded in precise hands-on technique and a whole-body approach, built on a deep understanding of anatomy, biomechanics, and how the body works.",
-    "body_2": "Outside the practice, Matthieu trains in Brazilian jiu-jitsu — a demanding discipline that nourishes his interest in movement, biomechanics, and performance.",
+    "body_1": "A graduate of the Collège d'Ostéopathie de Provence (Aix-Marseille), he has practised in France and abroad with patients of every age and walk of life. His work is grounded in precise hands-on technique and a whole-body view, built on a deep understanding of anatomy, biomechanics, and how the body works.",
+    "body_2": "Outside the practice, Matthieu trains in Brazilian jiu-jitsu — a demanding discipline that fuels his interest in movement, biomechanics, and performance.",
     "credentials": [
       "D.O. — Bac+5",
       "COP Aix-Marseille",
@@ -140,7 +140,7 @@
       },
       {
         "q": "How many sessions are typically needed?",
-        "a": "For an acute issue, 1 to 3 sessions are usually enough. For chronic or preventive follow-up, 2 to 4 sessions per year is appropriate."
+        "a": "For an acute issue, 1 to 3 sessions are usually enough. For chronic or preventive follow-up, 2 to 4 sessions per year is a good rhythm."
       },
       {
         "q": "Do you offer consultations in English?",
@@ -149,7 +149,7 @@
     ]
   },
   "contact": {
-    "eyebrow": "Contact & access",
+    "eyebrow": "Visit & book",
     "title": "Book an appointment",
     "address": "Address",
     "email": "Email",
@@ -161,7 +161,7 @@
     "cta": "Book on Doctolib"
   },
   "footer": {
-    "intro": "Osteopathy practice in the heart of Avignon. Manual, whole-body, personalized care. Consultations in French and English.",
+    "intro": "Osteopathy practice in the heart of Avignon. Hands-on, whole-person care, in English and French.",
     "nav": "Navigation",
     "legal": "Legal",
     "privacy": "Privacy policy",
