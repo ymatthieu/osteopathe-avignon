@@ -1,6 +1,6 @@
 # Matthieu Yeghiazarian — English-speaking Osteopath in Avignon, France
 
-> English-speaking osteopath D.O. (Matthieu Yeghiazarian) in Avignon, France, at 38 Avenue Saint-Ruf, 84000. Holistic, hands-on, personalized care for adults, athletes, expectant mothers, infants and children. 16+ years of experience. Online booking via Doctolib. Consultations in English and French.
+> English-speaking osteopath D.O. (Matthieu Yeghiazarian) in Avignon, France, at 38 Avenue Saint-Ruf, 84000. Hands-on, holistic, personalized care for adults, athletes, expectant mothers, infants and children. 16+ years of experience. Online booking via Doctolib. Consultations in English and French.
 
 This file follows the [llms.txt standard](https://llmstxt.org/) for AI crawlers.
 

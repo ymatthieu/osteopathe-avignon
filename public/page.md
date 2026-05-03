@@ -58,7 +58,7 @@ La performance ne se limite pas au sport. Elle concerne la capacité du corps à
 **Do you speak English?** Yes.
 
 ## English summary
-Matthieu Yeghiazarian, English-speaking osteopath D.O. in Avignon. 16+ years of experience. Holistic, hands-on, personalized care for adults, athletes, expectant mothers, infants and children. Online booking via Doctolib.
+Matthieu Yeghiazarian, English-speaking osteopath D.O. in Avignon. 16+ years of experience. Hands-on, holistic, personalized care for adults, athletes, expectant mothers, infants and children. Online booking via Doctolib.
 
 ---
 *Last updated: 2026-05.*
