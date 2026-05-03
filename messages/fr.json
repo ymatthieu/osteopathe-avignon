@@ -14,15 +14,17 @@
     "menu": "Menu"
   },
   "hero": {
-    "eyebrow": "Cabinet d'ostéopathie • Avignon",
-    "title_line_1": "Matthieu Yeghiazarian,",
-    "title_line_2": "Ostéopathe D.O.",
-    "tagline_1": "Mouvement",
-    "tagline_2": "Précision",
-    "tagline_3": "Performance",
+    "eyebrow": "Cabinet d'ostéopathie · Avignon",
+    "title_line_1": "Ostéopathie à Avignon",
+    "title_line_2": "Matthieu Yeghiazarian, D.O.",
+    "subtitle": "Approche manuelle, globale et personnalisée. 16 ans d'expérience. Consultations en français et en anglais, sur rendez-vous.",
     "cta_primary": "Prendre rendez-vous",
-    "cta_secondary": "Découvrir l'approche",
-    "scroll_hint": "Découvrir"
+    "cta_secondary": "Découvrir le cabinet",
+    "scroll_hint": "Faire défiler",
+    "trust_experience": "16 ans d'expérience",
+    "trust_languages": "FR / EN",
+    "trust_pricing": "60 € · 45 min",
+    "trust_booking": "RDV en ligne Doctolib"
   },
   "principles": {
     "eyebrow": "Notre approche",
@@ -158,6 +160,11 @@
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
     "accessibility": "Déclaration d'accessibilité",
+    "mentions": "Mentions légales",
     "rights": "Tous droits réservés."
+  },
+  "legal": {
+    "back_home": "Retour à l'accueil",
+    "last_updated": "Dernière mise à jour"
   }
 }

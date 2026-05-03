@@ -5,13 +5,31 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/**
+ * Single source of truth for site-wide constants.
+ *
+ * IMPORTANT for SEO: keep `name`, `address`, and `phone` IDENTICAL across:
+ *   - Google Business Profile
+ *   - Doctolib
+ *   - Pages Jaunes
+ *   - Conseil National de l'Ostéopathie
+ *   - any other directory
+ * Google's local algorithm cross-references these and demotes inconsistent NAP.
+ */
 export const SITE = {
   url: "https://www.osteopatheavignon.com",
   name: "Cabinet d'Ostéopathie Matthieu Yeghiazarian",
   shortName: "Matthieu Yeghiazarian, Ostéopathe D.O.",
   tagline: { fr: "Mouvement • Précision • Performance", en: "Movement • Precision • Performance" },
   email: "matt@osteopatheavignon.com",
-  phone: null as string | null, // ajoute ton tel ici si tu veux le rendre cliquable
+
+  // TODO — for #1 ranking, add a phone number here. Format: "+33 X XX XX XX XX".
+  // Without it, Pages Jaunes and several local directories will reject the listing,
+  // and the schema.org `telephone` field stays empty. Use a virtual number
+  // (Onoff / OVH / Free Mobile e-SIM) if you'd rather not publish a personal mobile.
+  // Example once set:    phone: "+33 4 90 XX XX XX",
+  phone: null as string | null,
+
   address: {
     street: "38 Avenue Saint-Ruf",
     postalCode: "84000",

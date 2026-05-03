@@ -30,7 +30,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
         >
           <span className="inline-block font-mono text-[11px] uppercase tracking-[0.22em] text-olive-700/80 mb-8">
-            Cabinet d&apos;ostéopathie · Avignon
+            {t("eyebrow")}
           </span>
         </motion.div>
 
@@ -41,11 +41,13 @@ export function Hero() {
           className="font-serif text-[clamp(2.6rem,6.5vw,5.5rem)] leading-[1.05] tracking-[-0.015em] text-olive-800"
           style={{ fontVariationSettings: "'wght' 460, 'opsz' 144, 'SOFT' 50" }}
         >
-          Matthieu Yeghiazarian,
+          {t("title_line_1")}
           <br />
-          <span className="italic text-olive-700"
-                style={{ fontVariationSettings: "'wght' 380, 'opsz' 144, 'SOFT' 100" }}>
-            Ostéopathe D.O.
+          <span
+            className="italic text-olive-700"
+            style={{ fontVariationSettings: "'wght' 380, 'opsz' 144, 'SOFT' 100" }}
+          >
+            {t("title_line_2")}
           </span>
         </motion.h1>
 
@@ -55,8 +57,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.55 }}
           className="mt-8 max-w-xl mx-auto text-lg text-ink/70 leading-relaxed"
         >
-          Approche manuelle, globale et personnalisée. 16 ans d&apos;expérience.
-          Consultations en français et en anglais, sur rendez-vous.
+          {t("subtitle")}
         </motion.p>
 
         <motion.div
@@ -72,13 +73,13 @@ export function Hero() {
             className="inline-flex items-center gap-3 rounded-full bg-olive-700 text-cream-50 px-8 py-4 text-base font-medium shadow-soft hover:bg-olive-800 hover:shadow-glow transition-all"
           >
             <CalendarCheck className="size-4" strokeWidth={1.8} />
-            Prendre rendez-vous
+            {t("cta_primary")}
           </a>
           <Link
             href="#about"
             className="inline-flex items-center gap-2 px-6 py-4 text-sm text-olive-800 hover:text-olive-900 transition-colors"
           >
-            Découvrir le cabinet
+            {t("cta_secondary")}
           </Link>
         </motion.div>
 
@@ -89,20 +90,20 @@ export function Hero() {
           transition={{ duration: 1, delay: 1.1 }}
           className="mt-20 flex flex-wrap justify-center items-center gap-x-8 gap-y-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/50"
         >
-          <span>16 ans d&apos;expérience</span>
+          <span>{t("trust_experience")}</span>
           <span aria-hidden>·</span>
-          <span>FR / EN</span>
+          <span>{t("trust_languages")}</span>
           <span aria-hidden>·</span>
-          <span>60 € · 45 min</span>
+          <span>{t("trust_pricing")}</span>
           <span aria-hidden>·</span>
-          <span>RDV en ligne Doctolib</span>
+          <span>{t("trust_booking")}</span>
         </motion.div>
       </div>
 
       {/* gentle scroll cue */}
       <motion.a
         href="#about"
-        aria-label="Faire défiler"
+        aria-label={t("scroll_hint")}
         initial={{ opacity: 0 }}
         animate={{ opacity: [0.2, 0.8, 0.2] }}
         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}

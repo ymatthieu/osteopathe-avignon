@@ -14,15 +14,17 @@
     "menu": "Menu"
   },
   "hero": {
-    "eyebrow": "Osteopathy practice • Avignon",
-    "title_line_1": "Matthieu Yeghiazarian,",
-    "title_line_2": "Osteopath D.O.",
-    "tagline_1": "Movement",
-    "tagline_2": "Precision",
-    "tagline_3": "Performance",
+    "eyebrow": "Osteopathy practice · Avignon",
+    "title_line_1": "Osteopathy in Avignon",
+    "title_line_2": "Matthieu Yeghiazarian, D.O.",
+    "subtitle": "Hands-on, whole-body, personalized care. 16 years of experience. Consultations in English and French, by appointment.",
     "cta_primary": "Book an appointment",
-    "cta_secondary": "Discover the approach",
-    "scroll_hint": "Discover"
+    "cta_secondary": "Discover the practice",
+    "scroll_hint": "Scroll",
+    "trust_experience": "16 years of experience",
+    "trust_languages": "EN / FR",
+    "trust_pricing": "€60 · 45 min",
+    "trust_booking": "Online booking via Doctolib"
   },
   "principles": {
     "eyebrow": "Our approach",
@@ -100,39 +102,39 @@
     "note": "Cash or card accepted. A receipt is issued after each session for reimbursement by your private insurance. Osteopathy is not covered by the French Social Security."
   },
   "testimonials": {
-    "eyebrow": "Google Reviews",
+    "eyebrow": "Google reviews",
     "title": "What patients say",
     "placeholder_title": "Your real Google reviews will appear here",
-    "placeholder_body": "Once 3-5 reviews are collected, the official Google Reviews widget will automatically display in this slot.",
+    "placeholder_body": "Once 3-5 reviews are collected, the official Google Reviews widget will display automatically in this spot.",
     "cta": "Create my Google Business profile"
   },
   "faq": {
-    "eyebrow": "Frequently asked questions",
+    "eyebrow": "Frequently asked",
     "title": "Everything you need to know",
     "items": [
       {
         "q": "How long is a session?",
-        "a": "An average consultation lasts 45 minutes. The first session may be slightly longer as it includes a full conversation about your history, lifestyle, and reasons for consulting."
+        "a": "A consultation lasts 45 minutes on average. The first session may be slightly longer because it includes a full intake about your history, lifestyle, and reasons for the visit."
       },
       {
-        "q": "What's the fee?",
-        "a": "Each consultation is €60 regardless of the reason. A receipt is provided after each session for potential reimbursement by your private insurance."
+        "q": "What does it cost?",
+        "a": "Sessions are €60 regardless of the reason for visit. A receipt is provided so you can claim reimbursement from your private health insurance."
       },
       {
-        "q": "Is osteopathy covered by Social Security?",
-        "a": "No, osteopathy is not reimbursed by the French Social Security. Most private insurance plans (mutuelles) cover all or part of sessions (typically 2-6 sessions per year)."
+        "q": "Is osteopathy reimbursed by Social Security?",
+        "a": "No, osteopathy is not covered by French Social Security. Most private insurance plans (mutuelles) cover all or part of the sessions, typically 2 to 6 per year."
       },
       {
         "q": "Do I need a prescription?",
-        "a": "No. Osteopaths are first-line practitioners — you can book directly. If needed, the osteopath will refer you to another health professional."
+        "a": "No. Osteopaths in France are first-line practitioners — you can consult directly. If needed, the osteopath will refer you to another health professional."
       },
       {
         "q": "From what age can someone consult?",
-        "a": "From birth. Newborns can be treated in the first days of life for common issues — positional cranial deformities, digestive trouble, restless sleep."
+        "a": "From birth. Newborns can be cared for in the first days of life for common issues such as positional cranial deformities, digestive troubles, or restless sleep."
       },
       {
-        "q": "How many sessions should I expect?",
-        "a": "For an acute issue, 1 to 3 sessions are usually enough. For chronic or preventive follow-up, a rhythm of 2 to 4 sessions per year is appropriate."
+        "q": "How many sessions are typically needed?",
+        "a": "For an acute issue, 1 to 3 sessions are usually enough. For chronic or preventive follow-up, 2 to 4 sessions per year is appropriate."
       },
       {
         "q": "Do you offer consultations in English?",
@@ -158,6 +160,11 @@
     "legal": "Legal",
     "privacy": "Privacy policy",
     "accessibility": "Accessibility statement",
+    "mentions": "Legal notice",
     "rights": "All rights reserved."
+  },
+  "legal": {
+    "back_home": "Back to home",
+    "last_updated": "Last updated"
   }
 }

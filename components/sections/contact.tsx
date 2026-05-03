@@ -27,16 +27,27 @@ export function Contact() {
         </div>
 
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-          {/* Info column */}
+          {/* Info column — wrapped in <address> for semantic HTML / local SEO */}
           <Reveal>
-            <div className="space-y-8">
+            <address className="not-italic space-y-8" itemScope itemType="https://schema.org/MedicalBusiness">
+              <meta itemProp="name" content={SITE.name} />
+
               <div>
                 <div className="text-xs uppercase tracking-[0.14em] text-olive-700 mb-2">
                   {t("address")}
                 </div>
-                <div className="font-serif text-xl text-olive-700">
-                  {SITE.address.street}<br />
-                  {SITE.address.postalCode} {SITE.address.city}
+                <div
+                  className="font-serif text-xl text-olive-700"
+                  itemProp="address"
+                  itemScope
+                  itemType="https://schema.org/PostalAddress"
+                >
+                  <span itemProp="streetAddress">{SITE.address.street}</span>
+                  <br />
+                  <span itemProp="postalCode">{SITE.address.postalCode}</span>{" "}
+                  <span itemProp="addressLocality">{SITE.address.city}</span>
+                  <meta itemProp="addressRegion" content="Vaucluse" />
+                  <meta itemProp="addressCountry" content={SITE.address.country} />
                 </div>
               </div>
 
@@ -46,11 +57,27 @@ export function Contact() {
                 </div>
                 <a
                   href={`mailto:${SITE.email}`}
+                  itemProp="email"
                   className="font-serif text-xl text-olive-700 hover:underline underline-offset-4"
                 >
                   {SITE.email}
                 </a>
               </div>
+
+              {SITE.phone && (
+                <div>
+                  <div className="text-xs uppercase tracking-[0.14em] text-olive-700 mb-2">
+                    Téléphone
+                  </div>
+                  <a
+                    href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                    itemProp="telephone"
+                    className="font-serif text-xl text-olive-700 hover:underline underline-offset-4"
+                  >
+                    {SITE.phone}
+                  </a>
+                </div>
+              )}
 
               <div>
                 <div className="text-xs uppercase tracking-[0.14em] text-olive-700 mb-3">
@@ -77,16 +104,15 @@ export function Contact() {
               <div className="pt-4">
                 <DoctolibButton variant="primary">{t("cta")}</DoctolibButton>
               </div>
-            </div>
+            </address>
           </Reveal>
 
           {/* Map + Doctolib widget column */}
           <Reveal delay={0.15}>
             <div className="space-y-6">
-              {/* Embedded map */}
               <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-olive-600/15 shadow-soft bg-cream-100">
                 <iframe
-                  title="Plan d'accès — Cabinet Yeghiazarian"
+                  title={`Plan d'accès — ${SITE.name}, ${SITE.address.street}, ${SITE.address.city}`}
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(`${SITE.address.street}, ${SITE.address.postalCode} ${SITE.address.city}`)}&output=embed`}
                   className="absolute inset-0 h-full w-full"
                   loading="lazy"
