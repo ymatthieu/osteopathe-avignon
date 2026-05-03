@@ -46,7 +46,9 @@ export const SITE = {
     mapsUrl: "https://www.google.com/maps?cid=9144548058221246800",
     // /avis redirects here. From the GBP page users tap "Avis" → "Donner un avis".
     // Once we have a g.page short link from GBP dashboard, replace this for one-click flow.
-    reviewUrl: "https://www.google.com/maps?cid=9144548058221246800",
+    // Official g.page shortlink from GBP dashboard → "Recueillez plus d'avis".
+    // One-click "Write a review" flow — opens the form directly.
+    reviewUrl: "https://g.page/r/CVD5w1EC9ud-EBM/review",
   },
 
   doctolib: {
