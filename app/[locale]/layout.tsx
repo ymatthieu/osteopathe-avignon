@@ -127,7 +127,7 @@ export default async function LocaleLayout({
   const pageUrl = `${SITE.url}${isFr ? "" : "/en"}`;
   const personDescription = isFr
     ? "Ostéopathe D.O. à Avignon depuis 16+ ans. Diplômé du Collège d'Ostéopathie de Provence (Aix-Marseille). Approche manuelle, globale et personnalisée. Adultes, sportifs, femmes enceintes, nourrissons et enfants. Consultations en français et en anglais. L'ostéopathie ne se substitue pas à un avis médical."
-    : "English-speaking osteopath D.O. in Avignon, France. 16+ years of experience. Graduate of Collège d'Ostéopathie de Provence (Aix-Marseille). Whole-body, hands-on, personalized care for adults, athletes, expectant mothers, infants and children.";
+    : "English-speaking osteopath D.O. in Avignon, France. 16+ years of experience. Graduate of Collège d'Ostéopathie de Provence (Aix-Marseille). Holistic, hands-on, personalized care for adults, athletes, expectant mothers, infants and children.";
 
   const graph = [
     {
