@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { locales, type Locale } from "@/lib/i18n";
 import { SITE } from "@/lib/utils";
+import { REVIEWS, REVIEW_STATS } from "@/lib/reviews";
 import { Nav } from "@/components/sections/nav";
 import { Footer } from "@/components/sections/footer";
 import { ScrollProgress } from "@/components/marketing/scroll-progress";
@@ -230,6 +231,31 @@ export default async function LocaleLayout({
         },
       ],
       sameAs: [SITE.doctolib.url, SITE.gbp.mapsUrl],
+      aggregateRating:
+        REVIEW_STATS.count > 0
+          ? {
+              "@type": "AggregateRating",
+              ratingValue: Number(REVIEW_STATS.average.toFixed(1)),
+              bestRating: 5,
+              worstRating: 1,
+              reviewCount: REVIEW_STATS.count,
+              ratingCount: REVIEW_STATS.count,
+            }
+          : undefined,
+      review: REVIEWS.map((r) => ({
+        "@type": "Review",
+        author: { "@type": "Person", name: r.author },
+        datePublished: r.date,
+        reviewBody: r.body,
+        inLanguage: r.lang,
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: r.rating,
+          bestRating: 5,
+          worstRating: 1,
+        },
+        publisher: { "@type": "Organization", name: "Google" },
+      })),
     },
     {
       "@type": ["Person", "Physician"],
@@ -306,34 +332,4 @@ export default async function LocaleLayout({
       mainEntity: { "@id": `${SITE.url}/#localbusiness` },
       primaryImageOfPage: { "@type": "ImageObject", url: PORTRAIT },
       breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
-      datePublished: "2026-04-01",
-      dateModified: new Date().toISOString().slice(0, 10),
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${pageUrl}#breadcrumb`,
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: isFr ? "Accueil" : "Home", item: pageUrl },
-      ],
-    },
-  ];
-
-  const jsonLd = { "@context": "https://schema.org", "@graph": graph };
-
-  return (
-    <NextIntlClientProvider messages={messages} locale={locale}>
-      <a className="skip-link" href="#main">
-        {isFr ? "Passer au contenu principal" : "Skip to main content"}
-      </a>
-      <ScrollProgress />
-      <Nav />
-      <main id="main">{children}</main>
-      <Footer />
-      <StickyCta />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-    </NextIntlClientProvider>
-  );
-}
+      datePublished: "202

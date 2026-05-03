@@ -110,9 +110,12 @@
   "testimonials": {
     "eyebrow": "Avis Google",
     "title": "La parole des patients",
-    "placeholder_title": "Vos vrais avis Google apparaîtront ici",
-    "placeholder_body": "Une fois 3-5 avis collectés, le widget Google Reviews officiel s'affichera automatiquement à cet emplacement.",
-    "cta": "Créer ma fiche Google Business"
+    "intro": "Avis publics laissés sur la fiche Google du cabinet. Cliquez pour les vérifier ou pour partager le vôtre.",
+    "translation_label": "Traduction",
+    "verified_on_google": "Avis publié sur Google",
+    "rating_summary": "{average} sur 5 · {count, plural, =1 {# avis} other {# avis}} sur Google",
+    "see_all": "Voir tous les avis sur Google",
+    "leave_review": "Laisser un avis"
   },
   "faq": {
     "eyebrow": "Questions fréquentes",

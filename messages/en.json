@@ -110,9 +110,12 @@
   "testimonials": {
     "eyebrow": "Google reviews",
     "title": "What patients say",
-    "placeholder_title": "Your real Google reviews will appear here",
-    "placeholder_body": "Once 3-5 reviews are collected, the official Google Reviews widget will display automatically in this spot.",
-    "cta": "Create my Google Business profile"
+    "intro": "Public reviews from the practice's Google Business Profile. Click through to verify them — or to leave your own.",
+    "translation_label": "Translation",
+    "verified_on_google": "Posted on Google",
+    "rating_summary": "{average} out of 5 · {count, plural, =1 {# review} other {# reviews}} on Google",
+    "see_all": "See all reviews on Google",
+    "leave_review": "Leave a review"
   },
   "faq": {
     "eyebrow": "Frequently asked",
