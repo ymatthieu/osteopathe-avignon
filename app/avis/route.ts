@@ -2,18 +2,15 @@ import { redirect } from "next/navigation";
 import { SITE } from "@/lib/utils";
 
 /**
- * /avis — short, memorable URL to give to patients so they can leave a review.
+ * /avis — short URL for patients to leave a Google review.
+ * Redirects to the verified GBP. The user lands there and taps "Donner un avis".
  *
- * Once Google Business Profile is set up, replace the fallback with the GBP
- * "write a review" deep link, which has the format:
- *   https://search.google.com/local/writereview?placeid=<PLACE_ID>
- * or the shortlink:
- *   https://g.page/r/<PAGE_ID>/review
- *
- * Until then, we redirect to Doctolib where patients can rate the consultation.
+ * To enable a true one-click flow, generate a short g.page review link from the
+ * GBP dashboard (Avis → "Demander des avis" → "Partager") and set it via the
+ * NEXT_PUBLIC_GBP_REVIEW_URL env var in Vercel — the override below picks it up.
  */
-const GBP_REVIEW_URL = process.env.NEXT_PUBLIC_GBP_REVIEW_URL || "";
+const OVERRIDE = process.env.NEXT_PUBLIC_GBP_REVIEW_URL || "";
 
 export function GET() {
-  redirect(GBP_REVIEW_URL || SITE.doctolib.url);
+  redirect(OVERRIDE || SITE.gbp.reviewUrl);
 }

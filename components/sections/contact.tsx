@@ -74,7 +74,7 @@ export function Contact() {
                     itemProp="telephone"
                     className="font-serif text-xl text-olive-700 hover:underline underline-offset-4"
                   >
-                    {SITE.phone}
+                    {SITE.phoneDisplay}
                   </a>
                 </div>
               )}

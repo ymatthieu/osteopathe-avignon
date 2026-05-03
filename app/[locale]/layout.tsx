@@ -233,7 +233,7 @@ export default async function LocaleLayout({
           url: SITE.doctolib.url,
         },
       ],
-      sameAs: [SITE.doctolib.url],
+      sameAs: [SITE.doctolib.url, SITE.gbp.mapsUrl],
     },
     {
       "@type": ["Person", "Physician"],
@@ -280,7 +280,7 @@ export default async function LocaleLayout({
         "Mobilité articulaire",
         "Jiu-jitsu brésilien",
       ],
-      sameAs: [SITE.doctolib.url],
+      sameAs: [SITE.doctolib.url, SITE.gbp.mapsUrl],
     },
     {
       "@type": "WebSite",
