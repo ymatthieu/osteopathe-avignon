@@ -332,4 +332,34 @@ export default async function LocaleLayout({
       mainEntity: { "@id": `${SITE.url}/#localbusiness` },
       primaryImageOfPage: { "@type": "ImageObject", url: PORTRAIT },
       breadcrumb: { "@id": `${pageUrl}#breadcrumb` },
-      datePublished: "202
+      datePublished: "2026-04-01",
+      dateModified: new Date().toISOString().slice(0, 10),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: isFr ? "Accueil" : "Home", item: pageUrl },
+      ],
+    },
+  ];
+
+  const jsonLd = { "@context": "https://schema.org", "@graph": graph };
+
+  return (
+    <NextIntlClientProvider messages={messages} locale={locale}>
+      <a className="skip-link" href="#main">
+        {isFr ? "Passer au contenu principal" : "Skip to main content"}
+      </a>
+      <ScrollProgress />
+      <Nav />
+      <main id="main">{children}</main>
+      <Footer />
+      <StickyCta />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+    </NextIntlClientProvider>
+  );
+}
